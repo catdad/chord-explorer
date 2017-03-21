@@ -1,0 +1,7 @@
+@import "atoms/extends";
+
+.button {
+  @extend %button-reset;
+  display: block;
+  margin: 0 auto;
+}

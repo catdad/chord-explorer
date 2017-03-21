@@ -1,0 +1,17 @@
+// Named colors, don't use these
+$off-white : #efefef;
+$off-black : #121212;
+$purple    : #590059;
+
+// Universal named colors, use these
+$color-white : #fff;
+$color-gray  : #808080;
+$color-black : #000;
+$color-red   : #f00;
+
+// Unnamed colors, use these
+$color-background : $off-white;
+$color-text       : $off-black;
+$color-accent     : $purple;
+$color-link       : $color-white;
+$color-link-hover : darken($color-link, 30%);
