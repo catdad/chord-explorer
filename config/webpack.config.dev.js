@@ -1,4 +1,3 @@
-var path = require('path');
 var autoprefixer = require('autoprefixer');
 var webpack = require('webpack');
 var findCacheDir = require('find-cache-dir');
@@ -6,6 +5,7 @@ var HtmlWebpackPlugin = require('html-webpack-plugin');
 var CaseSensitivePathsPlugin = require('case-sensitive-paths-webpack-plugin');
 var InterpolateHtmlPlugin = require('react-dev-utils/InterpolateHtmlPlugin');
 var WatchMissingNodeModulesPlugin = require('react-dev-utils/WatchMissingNodeModulesPlugin');
+
 var getClientEnvironment = require('./env');
 var paths = require('./paths');
 
@@ -89,12 +89,12 @@ module.exports = {
       {
         test: /\.(js|jsx)$/,
         loader: 'eslint',
-        include: paths.appSrc,
+        include: paths.appSrc
       },
       // Then, convert the scss to css so the rest of the loaders only work with css.
       {
         test: /\.scss$/,
-        loader: 'sass-loader',
+        loader: 'sass-loader'
       }
     ],
     loaders: [
@@ -153,16 +153,16 @@ module.exports = {
   },
 
   // We use PostCSS for autoprefixing only.
-  postcss: function() {
+  postcss: function () {
     return [
       autoprefixer({
         browsers: [
           '>1%',
           'last 4 versions',
           'Firefox ESR',
-          'not ie < 9', // React doesn't support IE8 anyway
+          'not ie < 9' // React doesn't support IE8 anyway
         ]
-      }),
+      })
     ];
   },
 
@@ -181,7 +181,7 @@ module.exports = {
     // Generates an `index.html` file with the <script> injected.
     new HtmlWebpackPlugin({
       inject: true,
-      template: paths.appHtml,
+      template: paths.appHtml
     }),
     // Makes some environment variables available to the JS code, for example:
     // if (process.env.NODE_ENV === 'development') { ... }. See `./env.js`.

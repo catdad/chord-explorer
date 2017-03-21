@@ -1,22 +1,26 @@
-var path = require('path');
+var url = require('url');
+
 var autoprefixer = require('autoprefixer');
 var webpack = require('webpack');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
 var InterpolateHtmlPlugin = require('react-dev-utils/InterpolateHtmlPlugin');
-var url = require('url');
+
 var paths = require('./paths');
 var getClientEnvironment = require('./env');
 
 function ensureSlash(path, needsSlash) {
   var hasSlash = path.endsWith('/');
+
   if (hasSlash && !needsSlash) {
     return path.substr(path, path.length - 1);
-  } else if (!hasSlash && needsSlash) {
-    return path + '/';
-  } else {
-    return path;
   }
+
+  if (!hasSlash && needsSlash) {
+    return path + '/';
+  }
+
+  return path;
 }
 
 // We use "homepage" field to infer "public path" at which the app is served.
@@ -93,12 +97,12 @@ module.exports = {
       {
         test: /\.(js|jsx)$/,
         loader: 'eslint',
-        include: paths.appSrc,
+        include: paths.appSrc
       },
       // Then, convert the scss to css so the rest of the loaders only work with css.
       {
         test: /\.scss$/,
-        loader: 'sass-loader',
+        loader: 'sass-loader'
       }
     ],
     loaders: [
@@ -106,8 +110,7 @@ module.exports = {
       {
         test: /\.(js|jsx)$/,
         include: paths.appSrc,
-        loader: 'babel',
-
+        loader: 'babel'
       },
       // The notation here is somewhat confusing.
       // "postcss" loader applies autoprefixer to our CSS.
@@ -163,16 +166,16 @@ module.exports = {
   },
 
   // We use PostCSS for autoprefixing only.
-  postcss: function() {
+  postcss: function () {
     return [
       autoprefixer({
         browsers: [
           '>1%',
           'last 4 versions',
           'Firefox ESR',
-          'not ie < 9', // React doesn't support IE8 anyway
+          'not ie < 9' // React doesn't support IE8 anyway
         ]
-      }),
+      })
     ];
   },
 
