@@ -8,7 +8,7 @@ export default function Strings() {
       <rect
         key={ i }
         className="string"
-        x={ ((99 / 5 * i) + 20).toString() }
+        x={ ((99 / 5 * i) + 20) }
         y="0"
         width="1"
         height="100"

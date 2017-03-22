@@ -9,7 +9,7 @@ export default function Frets() {
         key={ i }
         className="fret"
         x="20"
-        y={ (99 / 4 * i).toString() }
+        y={ (99 / 4 * i) }
         width="60"
         height="1"
       />

@@ -16,8 +16,8 @@ export default function Fingers({ fingering }) {
           key={ i }
           className="finger"
           r={ RADIUS }
-          cy={ ((FRETSIZE * fret) - (FRETSIZE / 2)).toString() }
-          cx={ (STRINGSIZE + (STRINGSIZE * i)).toString() }
+          cy={ ((FRETSIZE * fret) - (FRETSIZE / 2)) }
+          cx={ (STRINGSIZE + (STRINGSIZE * i)) }
         />
       );
     }
