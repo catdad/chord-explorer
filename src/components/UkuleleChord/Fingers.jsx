@@ -1,5 +1,9 @@
 import React, { PropTypes } from 'react';
 
+const STRINGSIZE = 20;
+const FRETSIZE = 99 / 4;
+const RADIUS = 5;
+
 export default function Fingers({ fingering }) {
   const fingers = [];
 
@@ -10,9 +14,9 @@ export default function Fingers({ fingering }) {
       fingers.push(
         <circle
           className="finger"
-          r="5"
-          cy={ (20 * fret).toString() }
-          cx={ (20 + (20 * i)).toString() }
+          r={ RADIUS }
+          cy={ ((FRETSIZE * fret) - (FRETSIZE / 2)).toString() }
+          cx={ (STRINGSIZE + (STRINGSIZE * i)).toString() }
         />
       );
     }
