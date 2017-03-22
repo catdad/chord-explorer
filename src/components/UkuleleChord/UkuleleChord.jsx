@@ -3,6 +3,7 @@ import './UkuleleChord.scss';
 import Nut from './Nut.jsx';
 import Strings from './Strings.jsx';
 import Frets from './Frets.jsx';
+import * as chords from './chords.json';
 
 export default class UkuleleChord extends PureComponent {
   static propTypes = {
@@ -13,7 +14,10 @@ export default class UkuleleChord extends PureComponent {
   };
 
   render() {
-//    const { name } = this.props;
+    const { name } = this.props;
+    const fingering = chords[name.toLowerCase()] || '0000';
+
+    global.console.log(fingering);
 
     return (
       <svg
