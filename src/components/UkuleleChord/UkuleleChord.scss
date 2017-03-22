@@ -1,3 +1,19 @@
-UkuleleChord{
-  display: block;
+.ukulele-chord {
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  margin: 10px;
+
+  path {
+    stroke: black;
+    stroke-width: 10px;
+  }
+
+  .nut {
+    fill: black;
+  }
+
+  .fret {
+    fill: lighten(black, 50%);
+  }
 }
