@@ -6,6 +6,7 @@ export default function Frets() {
   for (let i = 1; i < 5; i++) {
     frets.push(
       <rect
+        key={ i }
         className="fret"
         x="20"
         y={ (99 / 4 * i).toString() }

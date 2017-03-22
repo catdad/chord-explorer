@@ -6,6 +6,7 @@ export default function Strings() {
   for (let i = 0; i < 4; i++) {
     strings.push(
       <rect
+        key={ i }
         className="string"
         x={ ((99 / 5 * i) + 20).toString() }
         y="0"

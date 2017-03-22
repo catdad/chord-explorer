@@ -13,6 +13,7 @@ export default function Fingers({ fingering }) {
     if (fret !== 0) {
       fingers.push(
         <circle
+          key={ i }
           className="finger"
           r={ RADIUS }
           cy={ ((FRETSIZE * fret) - (FRETSIZE / 2)).toString() }
