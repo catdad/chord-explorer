@@ -4,7 +4,7 @@ import Nut from './Nut.jsx';
 import Strings from './Strings.jsx';
 import Frets from './Frets.jsx';
 import Fingers from './Fingers.jsx';
-import * as chords from './chords.json';
+import * as chords from './chords.js';
 
 export default class UkuleleChord extends PureComponent {
   static propTypes = {
@@ -16,7 +16,7 @@ export default class UkuleleChord extends PureComponent {
 
   render() {
     const { name } = this.props;
-    const fingering = chords[name.toLowerCase()] || chords.open;
+    const fingering = chords.get(name) || chords.get('open');
 
     return (
       <div className="ukulele-chord">
