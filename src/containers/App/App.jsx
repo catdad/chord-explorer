@@ -7,7 +7,12 @@ import './App.scss';
 
 export default function App(/* { children, levels, currentLevel } */) {
   return (
-    <UkuleleChord />
+    <div>
+      <UkuleleChord name="Am" />
+      <UkuleleChord name="C" />
+      <UkuleleChord name="G" />
+      <UkuleleChord name="F" />
+    </div>
   );
 }
 
