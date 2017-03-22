@@ -19,16 +19,16 @@ export default class UkuleleChord extends PureComponent {
     const fingering = chords[name.toLowerCase()] || chords.open;
 
     return (
-      <svg
-        className="ukulele-chord"
-        viewBox="0 0 100 100"
-      >
-        <Nut />
-        <Strings />
-        <Frets />
-        <Fingers fingering={ fingering } />
+      <div className="ukulele-chord">
+        <h1>{ name }</h1>
+        <svg viewBox="0 0 100 100">
+          <Nut />
+          <Strings />
+          <Frets />
+          <Fingers fingering={ fingering } />
 
-      </svg>
+        </svg>
+      </div>
     );
   }
 }

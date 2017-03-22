@@ -1,8 +1,19 @@
 .ukulele-chord {
   display: inline-block;
-  width: 100px;
-  height: 100px;
   margin: 10px;
+
+  h1 {
+    padding: 0;
+    margin: 0;
+    font-size: 1em;
+    font-weight: normal;
+    text-align: center;
+  }
+
+  svg {
+    width: 100px;
+    height: 100px;
+  }
 
   .nut {
     fill: black;
