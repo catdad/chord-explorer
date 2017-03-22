@@ -9,7 +9,10 @@ export default function App(/* { children, levels, currentLevel } */) {
   return (
     <div>
       <UkuleleChord name="Am" />
+      <UkuleleChord name="Bm" />
       <UkuleleChord name="C" />
+      <UkuleleChord name="D" />
+      <UkuleleChord name="Em" />
       <UkuleleChord name="G" />
       <UkuleleChord name="F" />
     </div>
