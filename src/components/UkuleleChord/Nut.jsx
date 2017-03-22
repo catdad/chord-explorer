@@ -9,7 +9,7 @@ export default function Nut() {
         height="2"
       />
       <rect
-        x="20" y="4"
+        x="20" y="3"
         width="60"
         height="1"
       />
