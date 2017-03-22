@@ -1,4 +1,4 @@
-//  import React, { PropTypes } from 'react';
+//  import React, { PropTypes, PureComponent } from 'react';
 //  import { connect } from 'react-redux';
 
 import React from 'react';
