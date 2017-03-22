@@ -11,7 +11,7 @@ export default function Nut() {
       <rect
         x="20" y="4"
         width="60"
-        height="2"
+        height="1"
       />
     </g>
   );
