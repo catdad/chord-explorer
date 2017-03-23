@@ -7,7 +7,7 @@ function unique(arr) {
 }
 
 export default function App() {
-  const str = 'A Am A# Am7 Bb B Bm C D Em G Gm G7 F';
+  const str = 'A Am A# Am7 Bb B Bm C D Em G Gm G7 F Q';
 
   const chords = unique(str.split(' '))
     .map((name) => <UkuleleChord key={ name } name={ name } />);
