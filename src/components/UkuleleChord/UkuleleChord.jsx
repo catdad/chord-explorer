@@ -22,9 +22,9 @@ export default class UkuleleChord extends PureComponent {
       <div className="ukulele-chord">
         <h1>{ name }</h1>
         <svg viewBox="0 0 100 100">
-          <Nut />
-          <Strings />
           <Frets />
+          <Strings />
+          <Nut />
           <Fingers fingering={ fingering } />
 
         </svg>
