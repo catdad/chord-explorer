@@ -1,3 +1,5 @@
+@import "atoms/variables";
+
 .ukulele-chord {
   display: inline-block;
   margin: 10px;
@@ -16,14 +18,18 @@
   }
 
   .nut {
-    fill: black;
+    fill: $color-text;
+  }
+
+  .string {
+    fill: darken($color-background, 50%);
   }
 
   .fret {
-    fill: lighten(black, 50%);
+    fill: $color-text;
   }
 
   .finger {
-    fill: darken(red, 20%);
+    fill: lighten($color-accent, 10%);
   }
 }
