@@ -32,4 +32,9 @@
   .finger {
     fill: lighten($color-accent, 10%);
   }
+
+  text.finger {
+    font-size: 4em;
+    fill: rgba($color-accent, 0.6);
+  }
 }

@@ -7,20 +7,33 @@ const RADIUS = 5;
 export default function Fingers({ fingering }) {
   const fingers = [];
 
-  for (let i = 0, l = fingering.length; i < l; i++) {
-    const fret = Number(fingering[i]);
+  if (fingering === null) {
+    fingers.push(
+      <text
+        key="?"
+        className="finger"
+        x="32"
+        y="70"
+      >{ '?' }</text>
+    );
+  } else {
 
-    if (fret !== 0) {
-      fingers.push(
-        <circle
-          key={ i }
-          className="finger"
-          r={ RADIUS }
-          cy={ ((FRETSIZE * fret) - (FRETSIZE / 2)) }
-          cx={ (STRINGSIZE + (STRINGSIZE * i)) }
-        />
-      );
+    for (let i = 0, l = fingering.length; i < l; i++) {
+      const fret = Number(fingering[i]);
+
+      if (fret !== 0) {
+        fingers.push(
+          <circle
+            key={ i }
+            className="finger"
+            r={ RADIUS }
+            cy={ ((FRETSIZE * fret) - (FRETSIZE / 2)) }
+            cx={ (STRINGSIZE + (STRINGSIZE * i)) }
+          />
+        );
+      }
     }
+
   }
 
   return (
@@ -29,5 +42,9 @@ export default function Fingers({ fingering }) {
 }
 
 Fingers.propTypes = {
-  fingering: PropTypes.string.isRequired
+  fingering: PropTypes.string
+};
+
+Fingers.defaultProps = {
+  fingering: null
 };

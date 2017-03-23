@@ -16,7 +16,7 @@ export default class UkuleleChord extends PureComponent {
 
   render() {
     const { name } = this.props;
-    const fingering = chords.get(name) || chords.get('open');
+    const fingering = chords.get(name);
 
     return (
       <div className="ukulele-chord">
