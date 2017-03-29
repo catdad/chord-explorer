@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { UkuleleChord } from '../../components';
+import { UkuleleChord, ChordInput } from '../../components';
 import './App.scss';
 
 function unique(arr) {
@@ -13,8 +13,15 @@ function App(/* { chords } */) {
   const chordElems = unique(str.split(' '))
     .map((name) => <UkuleleChord key={ name } name={ name } />);
 
+  function onSubmit(val) {
+    global.console.log(val);
+  }
+
   return (
-    <div>{ chordElems }</div>
+    <div>
+      <ChordInput onSubmit={ onSubmit } />
+      <div>{ chordElems }</div>
+    </div>
   );
 }
 
