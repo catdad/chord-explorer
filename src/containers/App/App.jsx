@@ -17,7 +17,7 @@ function clean(str) {
 
 class App extends PureComponent {
   static propTypes = {
-    chords: PropTypes.string.isRequired,
+    chords: PropTypes.objectOf(PropTypes.string).isRequired,
     actions: PropTypes.objectOf(PropTypes.func).isRequired
   };
 
@@ -28,13 +28,11 @@ class App extends PureComponent {
   }
 
   handleChordChange(value) {
-    global.console.log(value);
-
     this.props.actions.setChords(value);
   }
 
   render() {
-    const str = this.props.chords;
+    const str = this.props.chords.value;
 
     const chordElems = unique(clean(str).split(' '))
       .map((name) => <UkuleleChord key={ name } name={ name } />);
