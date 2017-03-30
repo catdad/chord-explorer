@@ -9,6 +9,12 @@ function unique(arr) {
   return Array.from(new Set(arr));
 }
 
+function clean(str) {
+  return str
+    .trim()
+    .replace(/\s+/g, ' ');
+}
+
 class App extends PureComponent {
   static propTypes = {
     chords: PropTypes.string.isRequired,
@@ -28,12 +34,10 @@ class App extends PureComponent {
   }
 
   render() {
-    const str = 'A Am A# Am7 Bb B Bm Bm7 C D Em E7 G Gm G7 F Fmaj7 Q open';
+    const str = this.props.chords;
 
-    const chordElems = unique(str.split(' '))
+    const chordElems = unique(clean(str).split(' '))
       .map((name) => <UkuleleChord key={ name } name={ name } />);
-
-    global.console.log(this.props.chords);
 
     return (
       <div>
