@@ -1,4 +1,6 @@
+import * as types from '../constants/actionTypes';
+
 export const setChords = (value) => ({
-  type: 'chords',
+  type: types.SET_CHORDS,
   value
 });
