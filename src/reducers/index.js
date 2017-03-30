@@ -26,10 +26,6 @@ const chords = createReducer({
   }
 });
 
-//  function chords(state = DEFAULT_CHORDS, action) {
-//    return action.value || state;
-//  }
-
 const rootReducer = combineReducers({
   chords
 });
