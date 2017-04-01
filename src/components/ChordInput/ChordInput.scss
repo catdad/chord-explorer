@@ -14,10 +14,14 @@
     font-size: 1.5em;
     padding: 10px;
     border: none;
-    border-radius: 2px;
-    text-decoration: underline;
+    border-radius: 3px;
 
+    color: lighten($color-text, 20%);
     background: rgba($color-accent, 0.2);
+
+    &:focus {
+      outline-color: rgba($color-accent, 0.7);
+    }
 
     &::-webkit-input-placeholder,
     &::-moz-placeholder,
