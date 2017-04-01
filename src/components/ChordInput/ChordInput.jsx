@@ -1,4 +1,5 @@
 import React, { PureComponent, PropTypes } from 'react';
+import './ChordInput.scss';
 
 export default class ChordInput extends PureComponent {
   static propTypes = {
@@ -19,8 +20,11 @@ export default class ChordInput extends PureComponent {
 
   render() {
     return (
-      <div>
-        <input onChange={ this.handleChange } />
+      <div className="chord-input">
+        <input
+          onChange={ this.handleChange }
+          placeholder="Chord list"
+        />
       </div>
     );
   }
