@@ -6,8 +6,8 @@ function unique(arr) {
 
 function clean(str) {
   return str
-    .trim()
-    .replace(/\s+/g, ' ');
+    .replace(/\s*,\s*/g, ' ')
+    .trim();
 }
 
 export const setChords = (value) => {
