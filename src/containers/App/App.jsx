@@ -28,7 +28,7 @@ class App extends PureComponent {
     return (
       <div>
         <ChordInput onChange={ this.handleChordChange } />
-        <div>{ chordElems }</div>
+        <div>{ chordElems.length ? chordElems : 'Nothing to see here.' }</div>
       </div>
     );
   }
