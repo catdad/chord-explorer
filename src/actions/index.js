@@ -1,6 +1,25 @@
 import * as types from '../constants/actionTypes';
 
-export const setChords = (value) => ({
-  type: types.SET_CHORDS,
-  value
-});
+function unique(arr) {
+  return Array.from(new Set(arr));
+}
+
+function clean(str) {
+  return str
+    .trim()
+    .replace(/\s+/g, ' ');
+}
+
+export const setChords = (value) => {
+  const data = {
+    type: types.SET_CHORDS
+  };
+
+  if (Array.isArray(value)) {
+    data.value = unique(value);
+  } else {
+    data.value = unique(clean(value).split(' '));
+  }
+
+  return data;
+};

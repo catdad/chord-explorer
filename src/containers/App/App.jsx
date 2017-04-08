@@ -5,19 +5,9 @@ import { UkuleleChord, ChordInput } from '../../components';
 import * as actionCreators from '../../actions';
 import './App.scss';
 
-function unique(arr) {
-  return Array.from(new Set(arr));
-}
-
-function clean(str) {
-  return str
-    .trim()
-    .replace(/\s+/g, ' ');
-}
-
 class App extends PureComponent {
   static propTypes = {
-    chords: PropTypes.objectOf(PropTypes.string).isRequired,
+    chords: PropTypes.objectOf(PropTypes.arrayOf(PropTypes.string)).isRequired,
     actions: PropTypes.objectOf(PropTypes.func).isRequired
   };
 
@@ -32,9 +22,7 @@ class App extends PureComponent {
   }
 
   render() {
-    const str = this.props.chords.value;
-
-    const chordElems = unique(clean(str).split(' '))
+    const chordElems = this.props.chords.value
       .map((name) => <UkuleleChord key={ name } name={ name } />);
 
     return (
