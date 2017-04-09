@@ -7,6 +7,7 @@ function unique(arr) {
 function clean(str) {
   return str
     .replace(/\s*,\s*/g, ' ')
+    .replace(/\s+/g, ' ')
     .trim();
 }
 
