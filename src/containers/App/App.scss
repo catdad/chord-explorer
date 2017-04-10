@@ -3,3 +3,14 @@
 @import "atoms/mixins";
 
 @import "molecules/globals";
+
+.header-input {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.chords-body {
+  padding-top: 70px;
+}

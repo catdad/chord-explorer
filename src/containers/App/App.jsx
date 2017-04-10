@@ -27,8 +27,10 @@ class App extends PureComponent {
 
     return (
       <div>
-        <ChordInput onChange={ this.handleChordChange } />
-        <div>{
+        <div className="header-input">
+          <ChordInput onChange={ this.handleChordChange } />
+        </div>
+        <div className="chords-body">{
           chordElems.length ?
             chordElems :
             'Nothing to see here.'
