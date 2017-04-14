@@ -4,11 +4,11 @@ const STRINGSIZE = 20;
 const FRETSIZE = 99 / 4;
 const RADIUS = 5;
 
-export default function Fingers({ fingering }) {
-  const fingers = [];
+export default function Fingers({ fingers }) {
+  const elems = [];
 
-  if (fingering === null) {
-    fingers.push(
+  if (fingers === null || !fingers.length) {
+    elems.push(
       <text
         key="?"
         className="finger"
@@ -18,11 +18,11 @@ export default function Fingers({ fingering }) {
     );
   } else {
 
-    for (let i = 0, l = fingering.length; i < l; i++) {
-      const fret = Number(fingering[i]);
+    for (let i = 0, l = fingers.length; i < l; i++) {
+      const fret = fingers[i];
 
       if (fret !== 0) {
-        fingers.push(
+        elems.push(
           <circle
             key={ i }
             className="finger"
@@ -37,14 +37,14 @@ export default function Fingers({ fingering }) {
   }
 
   return (
-    <g>{ fingers }</g>
+    <g>{ elems }</g>
   );
 }
 
 Fingers.propTypes = {
-  fingering: PropTypes.string
+  fingers: PropTypes.arrayOf(PropTypes.number)
 };
 
 Fingers.defaultProps = {
-  fingering: null
+  fingers: null
 };

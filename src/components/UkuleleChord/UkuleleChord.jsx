@@ -17,6 +17,22 @@ export default class UkuleleChord extends PureComponent {
   render() {
     const { name } = this.props;
     const fingering = chords.get({ name });
+    let fingers = fingering ? fingering.split('').map(Number) : [];
+    const min = Math.min(...fingers);
+    const max = Math.max(...fingers);
+    let base = 0;
+
+    if (max > 4) {
+      // this chord is further up the next, so adjust
+      base = min;
+      fingers = fingers.map((i) => {
+        if (i) {
+          return i - min + 1;
+        }
+
+        return 0;
+      });
+    }
 
     return (
       <div className="ukulele-chord">
@@ -24,8 +40,8 @@ export default class UkuleleChord extends PureComponent {
         <svg viewBox="0 0 100 100">
           <Frets />
           <Strings />
-          <Nut />
-          <Fingers fingering={ fingering } />
+          <Nut base={ base } />
+          <Fingers fingers={ fingers } />
 
         </svg>
       </div>

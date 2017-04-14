@@ -33,6 +33,11 @@
     fill: lighten($color-accent, 10%);
   }
 
+  .fret-num {
+    font-size: 0.9em;
+    color: $color-accent;
+  }
+
   text.finger {
     font-size: 4em;
     opacity: 0.8;
