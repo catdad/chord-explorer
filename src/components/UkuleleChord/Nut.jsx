@@ -5,10 +5,15 @@ export default function Nut({ base }) {
     return (
       <g>
         <rect
-          x="20" y="3"
+          x="20" y="2"
           width="60"
           height="1"
         />
+        <text
+          className="fret-num"
+          x="88"
+          y="20"
+        >{ base }</text>
       </g>
     );
   }
