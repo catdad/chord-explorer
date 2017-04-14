@@ -90,6 +90,6 @@ const CHORDS = {
   'open': '0000'
 };
 
-export function get(name) {
+export function get({ name }) {
   return CHORDS[name.toLowerCase()];
 }
