@@ -91,6 +91,7 @@ const CHORDS = {
   'g9': '0310',
 
   // G# / Ab
+  'g#': '1003', // '5343',
 
   // special names
   'open': '0000'
