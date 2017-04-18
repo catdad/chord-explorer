@@ -54,6 +54,7 @@ const CHORDS = {
   'd#m': '3321',
   'ebm': '3321',
   'ebmaj7': '3330',
+  'eb7': '3335',
   'eb9': '0111',
 
   // E
@@ -92,6 +93,7 @@ const CHORDS = {
 
   // G# / Ab
   'g#': '1003', // '5343',
+  'abmaj7': '1333',
 
   // special names
   'open': '0000'
