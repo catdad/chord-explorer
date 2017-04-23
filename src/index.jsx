@@ -17,6 +17,8 @@ render(
   <Provider store={ store }>
     <Router history={ browserHistory }>
       <Route path="/" component={ App } />
+      <Route path="/ukulele" component={ App } />
+      <Route path="/ukulele/:chordstring" component={ App } />
     </Router>
   </Provider>,
   document.getElementById('root')

@@ -16,9 +16,22 @@ class App extends PureComponent {
     super(props);
 
     this.handleChordChange = this.handleChordChange.bind(this);
+    this.initChords = '';
+  }
+
+  componentDidMount() {
+    this.initChords = this.props.params.chordstring || '';
+
+    global.console.log('component did mount', this.initChords);
+
+    if (this.initChords) {
+      this.handleChordChange(this.initChords);
+    }
   }
 
   handleChordChange(value) {
+    global.console.log('handle change');
+    this.initChords = '';
     this.props.actions.setChords(value);
   }
 
@@ -29,7 +42,10 @@ class App extends PureComponent {
     return (
       <div>
         <div className="header-input">
-          <ChordInput onChange={ this.handleChordChange } />
+          <ChordInput
+            onChange={ this.handleChordChange }
+//            value={ this.initChords || 'Am' }
+          />
         </div>
         <div className="chords-body">{
           chordElems.length ?
