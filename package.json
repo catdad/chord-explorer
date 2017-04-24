@@ -70,5 +70,13 @@
   "version": "0.1.0",
   "author": "Kiril Vatev <vatev.1@gmail.com>",
   "license": "ISC",
-  "description": ""
+  "description": "",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/catdad/chord-explorer.git"
+  },
+  "bugs": {
+    "url": "https://github.com/catdad/chord-explorer/issues"
+  },
+  "homepage": "https://github.com/catdad/chord-explorer#readme"
 }
