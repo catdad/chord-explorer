@@ -23,8 +23,10 @@ class App extends PureComponent {
   }
 
   componentDidMount() {
-    if (this.props.params.chordstring) {
-      this.handleChordChange(this.props.params.chordstring);
+    const { chordstring } = this.props.params;
+
+    if (chordstring) {
+      this.handleChordChange(chordstring.replace(/s/gi, '#'));
     }
   }
 
