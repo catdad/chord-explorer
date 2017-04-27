@@ -16,16 +16,11 @@ class App extends PureComponent {
     super(props);
 
     this.handleChordChange = this.handleChordChange.bind(this);
-    this.initChords = '';
   }
 
   componentDidMount() {
-    this.initChords = this.props.params.chordstring || '';
-
-    global.console.log('component did mount', this.initChords);
-
-    if (this.initChords) {
-      this.handleChordChange(this.initChords);
+    if (this.props.params.chordstring) {
+      this.handleChordChange(this.props.params.chordstring);
     }
   }
 
