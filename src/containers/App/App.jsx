@@ -30,8 +30,6 @@ class App extends PureComponent {
   }
 
   handleChordChange(value) {
-    global.console.log('handle change');
-    this.initChords = '';
     this.props.actions.setChords(value);
   }
 
