@@ -17,9 +17,11 @@ export const setChords = (value) => {
   };
 
   if (Array.isArray(value)) {
-    data.value = unique(value);
+    data.array = unique(value);
+    data.value = data.array.join(' ');
   } else {
-    data.value = unique(clean(value).split(' '));
+    data.value = value;
+    data.array = unique(clean(value).split(' '));
   }
 
   return data;

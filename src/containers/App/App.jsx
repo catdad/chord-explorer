@@ -36,7 +36,7 @@ class App extends PureComponent {
   }
 
   render() {
-    const chordElems = this.props.chords.value
+    const chordElems = this.props.chords.array
       .map((name) => <UkuleleChord key={ name } name={ name } />);
 
     return (
@@ -44,7 +44,7 @@ class App extends PureComponent {
         <div className="header-input">
           <ChordInput
             onChange={ this.handleChordChange }
-//            value={ this.initChords || 'Am' }
+            value={ this.props.chords.value }
           />
         </div>
         <div className="chords-body">{

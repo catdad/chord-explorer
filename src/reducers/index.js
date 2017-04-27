@@ -1,7 +1,7 @@
 import { combineReducers } from 'redux';
 import * as types from '../constants/actionTypes';
 
-const DEFAULT_CHORDS = 'A Am A# Am7 Bb B Bm Bm7 C D Em E7 G Gm G7 F Fmaj7 F#maj7 Q open'.split(' ');
+const DEFAULT_CHORDS = 'A Am A# Am7 Bb B Bm Bm7 C D Em E7 G Gm G7 F Fmaj7 F#maj7 Q open';
 
 function createReducer(initialState, handlers) {
 
@@ -16,15 +16,18 @@ function createReducer(initialState, handlers) {
 }
 
 const chords = createReducer({
-  value: DEFAULT_CHORDS
+  value: DEFAULT_CHORDS,
+  array: DEFAULT_CHORDS.split(' ')
 }, {
   [types.SET_CHORDS](state, action) {
     const data = { ...state };
 
     if (action.value.length === 1 && action.value[0] === '') {
-      data.value = [];
+      data.value = '';
+      data.array = [];
     } else {
-      data.value = action.value || [];
+      data.value = action.value || '';
+      data.array = action.array || [];
     }
 
     return data;
