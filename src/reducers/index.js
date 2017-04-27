@@ -1,7 +1,7 @@
 import { combineReducers } from 'redux';
 import * as types from '../constants/actionTypes';
 
-const DEFAULT_CHORDS = 'A Am A# Am7 Bb B Bm Bm7 C D Em E7 G Gm G7 F Fmaj7 F#maj7 Q open';
+const DEFAULT_CHORDS = 'A Am A# Am7 Bb B Bm Bm7 C D Em E7 G Gm G7 F Fmaj7 F#maj7 Q open'.split(' ');
 
 function createReducer(initialState, handlers) {
 
@@ -15,9 +15,14 @@ function createReducer(initialState, handlers) {
   };
 }
 
+function sanitize(arr) {
+  return arr.join(',').replace(/#/g, 's');
+}
+
 const chords = createReducer({
-  value: DEFAULT_CHORDS,
-  array: DEFAULT_CHORDS.split(' ')
+  value: DEFAULT_CHORDS.join(' '),
+  array: DEFAULT_CHORDS,
+  sanitized: sanitize(DEFAULT_CHORDS)
 }, {
   [types.SET_CHORDS](state, action) {
     const data = { ...state };
@@ -29,6 +34,9 @@ const chords = createReducer({
       data.value = action.value || '';
       data.array = action.array || [];
     }
+
+    // create a url-safe version of the string value as well
+    data.sanitized = sanitize(data.array);
 
     return data;
   }
