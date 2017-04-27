@@ -8,7 +8,10 @@ import './App.scss';
 
 class App extends PureComponent {
   static propTypes = {
-    chords: PropTypes.objectOf(PropTypes.arrayOf(PropTypes.string)).isRequired,
+    chords: PropTypes.shape({
+      value: PropTypes.string.isRequired,
+      array: PropTypes.arrayOf(PropTypes.string).isRequired
+    }).isRequired,
     actions: PropTypes.objectOf(PropTypes.func).isRequired
   };
 
