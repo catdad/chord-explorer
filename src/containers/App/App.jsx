@@ -26,11 +26,7 @@ class App extends PureComponent {
     const { chordstring } = this.props.params;
 
     if (chordstring) {
-      this.handleChordChange(
-        chordstring
-          .replace(/s/gi, '#')
-          .replace(/,/g, ' ')
-      );
+      this.props.actions.setChordstring(chordstring);
     }
   }
 
