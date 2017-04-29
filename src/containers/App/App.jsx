@@ -13,7 +13,10 @@ class App extends PureComponent {
       array: PropTypes.arrayOf(PropTypes.string).isRequired,
       sanitized: PropTypes.string.isRequired
     }).isRequired,
-    actions: PropTypes.objectOf(PropTypes.func).isRequired
+    actions: PropTypes.objectOf(PropTypes.func).isRequired,
+    params: PropTypes.shape({
+      chordstring: PropTypes.string
+    }).isRequired
   };
 
   constructor(props) {
