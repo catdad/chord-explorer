@@ -16,7 +16,7 @@ function createReducer(initialState, handlers) {
 }
 
 function sanitize(arr) {
-  return arr.join(',').replace(/#/g, 's');
+  return arr.join(',').replace(/#/g, '-');
 }
 
 const chords = createReducer({

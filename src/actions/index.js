@@ -27,4 +27,4 @@ export const setChords = (value) => {
   return data;
 };
 
-export const setChordstring = (value) => setChords(value.replace(/s/gi, '#').replace(/,/g, ' '));
+export const setChordstring = (value) => setChords(value.replace(/-/gi, '#').replace(/,/g, ' '));
