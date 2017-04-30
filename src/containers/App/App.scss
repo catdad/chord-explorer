@@ -4,13 +4,28 @@
 
 @import "molecules/globals";
 
-.header-input {
+.app-body {
+  width: 100%;
+  height: 100%;
+}
+
+.app-header-wrap {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
+  flex-grow: 0;
+}
+
+.app-body-wrap {
+  padding-top: 70px;
+  display: flex;
+}
+
+.header-input {
+
 }
 
 .chords-body {
-  padding-top: 70px;
+
 }

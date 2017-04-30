@@ -42,17 +42,23 @@ class App extends PureComponent {
       .map((name) => <UkuleleChord key={ name } name={ name } />);
 
     return (
-      <div>
-        <div className="header-input">
-          <ChordInput
-            onChange={ this.handleChordChange }
-            value={ this.props.chords.value }
-          />
+      <div className="app-body">
+        <div className="app-header-wrap">
+          <div className="header-input">
+            <ChordInput
+              onChange={ this.handleChordChange }
+              value={ this.props.chords.value }
+            />
+          </div>
         </div>
-        <div className="chords-body">{
+        <div className="app-body-wrap">{
           chordElems.length ?
-            chordElems :
-            'Nothing to see here.'
+            <div className="chord-body">{
+              chordElems
+            }</div> :
+            <div className="empty-body">{
+              'Nothing to see here.'
+            }</div>
         }</div>
       </div>
     );
