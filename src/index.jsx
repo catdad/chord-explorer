@@ -25,12 +25,14 @@ const middleware = (store) => (next) => (action) => {
   console.log('after', after);
   console.log('result', result);
 
-  if (action !== types.SET_CHORDS) {
+  if (action.type !== types.SET_CHORDS) {
     return result;
   }
 
   const location = browserHistory.location;
   const newLocation = `/ukulele/${after.chords.sanitized}`;
+
+  console.log(location, newLocation);
 
   browserHistory.replace(newLocation, { chordstring: after.chords.sanitized });
 
