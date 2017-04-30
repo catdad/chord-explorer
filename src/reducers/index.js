@@ -27,7 +27,7 @@ const chords = createReducer({
   [types.SET_CHORDS](state, action) {
     const data = { ...state };
 
-    if (action.value.length === 1 && action.value[0] === '') {
+    if (action.value === '') {
       data.value = '';
       data.array = [];
     } else {
