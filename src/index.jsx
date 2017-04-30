@@ -8,17 +8,15 @@ import { App } from './containers';
 import reducer from './reducers';
 import * as types from './constants/actionTypes';
 
-/* eslint-disable */
-
 const browserHistory = useBasename(createHistory)({
   basename: process.env.PUBLIC_URL // eslint-disable-line no-process-env
 });
 
-const middleware = (store) => (next) => (action) => {
-  let before = store.getState();
+const middleware = (store) => (nextState) => (action) => {
+//  const before = store.getState();
 
-  let result = next(action);
-  let after = store.getState();
+  const result = nextState(action);
+  const after = store.getState();
 
   if (action.type !== types.SET_CHORDS) {
     return result;
