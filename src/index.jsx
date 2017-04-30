@@ -16,25 +16,17 @@ const browserHistory = useBasename(createHistory)({
 
 const middleware = (store) => (next) => (action) => {
   let before = store.getState();
-  console.log(action);
 
   let result = next(action);
   let after = store.getState();
-
-  console.log('before', before);
-  console.log('after', after);
-  console.log('result', result);
 
   if (action.type !== types.SET_CHORDS) {
     return result;
   }
 
-  const location = browserHistory.location;
-  const newLocation = `/ukulele/${after.chords.sanitized}`;
+  const url = `/ukulele/${after.chords.sanitized}`;
 
-  console.log(location, newLocation);
-
-  browserHistory.replace(newLocation, { chordstring: after.chords.sanitized });
+  browserHistory.replace(url, { chordstring: after.chords.sanitized });
 
   return result;
 };
