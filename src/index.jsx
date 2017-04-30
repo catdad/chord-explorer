@@ -24,6 +24,8 @@ const middleware = (store) => (nextState) => (action) => {
 
   const url = `/ukulele/${after.chords.sanitized}`;
 
+  // we'll replace the state when chords are updated, to avoid having
+  // a brand new history entry every time the user types a character
   browserHistory.replace(url, { chordstring: after.chords.sanitized });
 
   return result;
