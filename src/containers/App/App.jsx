@@ -2,7 +2,7 @@ import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
-import { UkuleleChord, ChordInput } from '../../components';
+import { UkuleleChord, ChordInput, EmptyChordlist } from '../../components';
 import * as actionCreators from '../../actions';
 import './App.scss';
 
@@ -56,9 +56,9 @@ class App extends PureComponent {
             <div className="chord-body">{
               chordElems
             }</div> :
-            <div className="empty-body">{
-              'Nothing to see here.'
-            }</div>
+            <div className="empty-body">
+              <EmptyChordlist />
+            </div>
         }</div>
       </div>
     );
