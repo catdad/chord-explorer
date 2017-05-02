@@ -1,7 +1,8 @@
 import React from 'react';
+import './EmptyChordlist.scss';
 
-export default function EmptyCHordlist() {
+export default function EmptyChordlist() {
   return (
-    <div>{ 'Nothing to see here.' }</div>
+    <div className="empty-chordlist">{ 'Nothing to see here.' }</div>
   );
 }

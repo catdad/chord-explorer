@@ -15,3 +15,5 @@ $color-text       : $off-black;
 $color-accent     : $purple;
 $color-link       : $color-white;
 $color-link-hover : darken($color-link, 30%);
+
+$background-accent : desaturate(lighten($color-accent, 60%), 80%);
