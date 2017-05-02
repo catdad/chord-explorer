@@ -58,7 +58,11 @@ class App extends PureComponent {
             }</div> :
             <EmptyChordlist />
         }</div>
-        <div className="app-footer-wrap">{ 'This is the footer.' }</div>
+        <div className="app-footer-wrap">
+          <span>{ 'Made with 💕 and 🍸 by ' }</span>
+          <a href="https://github.com/catdad">{ '@catdad' }</a>
+          <span>{ '.' }</span>
+        </div>
       </div>
     );
   }

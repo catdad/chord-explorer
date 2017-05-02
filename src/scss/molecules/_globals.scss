@@ -49,11 +49,6 @@ a {
   outline: none;
   text-decoration: none;
   transition: background 150ms, border-color 250ms, color 250ms, opacity 250ms;
-
-  &:hover,
-  &:focus {
-    color: $color-link-hover;
-  }
 }
 
 p:first-child {
