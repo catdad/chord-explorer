@@ -53,9 +53,7 @@ class App extends PureComponent {
         </div>
         <div className="app-body-wrap">{
           chordElems.length ?
-            <div className="chord-body">{
-              chordElems
-            }</div> :
+            <div className="chord-body">{ chordElems }</div> :
             <EmptyChordlist />
         }</div>
         <div className="app-footer-wrap">
