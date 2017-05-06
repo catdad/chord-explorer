@@ -25,8 +25,8 @@
 
     &::-webkit-input-placeholder,
     &::-moz-placeholder,
-    &:-ms-input-placeholder,
     &:-moz-placeholder,
+    &:-ms-input-placeholder,
     &:placeholder {
       color: rgba($color-text, 0.7);
     }
