@@ -154,7 +154,5 @@ function parse(chord) {
 export function get({ name }) {
   const chord = parse(name);
 
-  global.console.log(chord);
-
   return chord.chord || chord.altchord;
 }
