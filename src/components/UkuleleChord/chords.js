@@ -113,7 +113,7 @@ const CHORDS = {
 
   // G# / Ab
   'g#': '1003', // '5343',
-  'abmaj7': '1333',
+  'g#maj7': '1333',
 
   // special names
   'open': '0000'
