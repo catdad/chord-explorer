@@ -1,5 +1,5 @@
 function chordRegex() {
-  return /^([a-g][#b]?)(.)*/i;
+  return /^([a-g][#b]?)([a-z0-9]*)/i;
 }
 
 const ALTROOT = {
