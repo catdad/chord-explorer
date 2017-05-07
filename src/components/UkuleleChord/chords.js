@@ -129,25 +129,26 @@ const CHORDS = {
 function parse(chord) {
   const str = chord.toLowerCase();
 
-  if (chordRegex().test(str)) {
-    const match = str.match(chordRegex());
-    const root = match[1];
-    const mod = match[2] || '';
-    const altroot = ALTROOT[root] || root;
+  const match = str.match(chordRegex());
 
+  if (!match) {
     return {
       name: chord,
-      root,
-      altroot,
-      mod,
-      chord: CHORDS[str],
-      altchord: CHORDS[altroot + mod]
+      chord: CHORDS[str]
     };
   }
 
+  const root = match[1];
+  const mod = match[2] || '';
+  const altroot = ALTROOT[root] || root;
+
   return {
     name: chord,
-    chord: CHORDS[str]
+    root,
+    altroot,
+    mod,
+    chord: CHORDS[str],
+    altchord: CHORDS[altroot + mod]
   };
 }
 
