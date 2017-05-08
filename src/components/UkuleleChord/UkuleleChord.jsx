@@ -7,6 +7,10 @@ import Frets from './Frets.jsx';
 import Fingers from './Fingers.jsx';
 import * as chords from './chords.js';
 
+function capitalize(str) {
+  return str.charAt(0).toUpperCase() + str.slice(1);
+}
+
 export default class UkuleleChord extends PureComponent {
   static propTypes = {
     name: PropTypes.string
@@ -37,7 +41,7 @@ export default class UkuleleChord extends PureComponent {
 
     return (
       <div className="ukulele-chord">
-        <h1>{ name }</h1>
+        <h1>{ fingering ? capitalize(name) : name }</h1>
         <svg viewBox="0 0 100 100">
           <Frets />
           <Strings />
