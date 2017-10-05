@@ -15,4 +15,4 @@ deploy:
   target_branch: 'gh-pages'
   on:
     repo: catdad/chord-explorer
-    branch: *
+    branch: '*'
