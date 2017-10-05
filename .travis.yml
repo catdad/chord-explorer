@@ -5,3 +5,11 @@ node_js:
 
 script:
   - npm run build
+
+deploy:
+  provider: pages
+  skip_cleanup: true
+  api_key:
+    secure: ZEuZeiUpGbkcFiROkfB3d7nGB/ckEjbkL19rK0Tpenlsrza1u0s5NqdqAaQ1xDwNjAtbJAitadZlm6clprQ5P0FVPQnHYolsHaf1GoZQAa9ZfE09ama/ULlj27B2npmAzkPIEpELMQeu+ICsC8MYLC5+x4uWKnG5nswCEup88XNWMbGspvlSEHJ52FcckYkelm7I/Q5By29cExVrKnj3Q3/Cwl6BQQKdMCsL6aPO8IB4iyJG3Sgn+Yvgh3Fxh8ed3RBfwJVqxUeCRY26nL224qpr6RAgsSAuiZg+yMxKLvu8BCqL9lN3lgTBNwLM+0K5XTuPKTpzBG7ui1WjImO7KtwrlMiuHuC0RCfBA5nVHHMMwjTh6TwKZX/pGJWgNY0fFjj6X8EJQfKzIVhrULn5neXVSY092+BElp9u1gCGVxNwNk0SsarhcleY7jql++kq4zdvsCqrqJWtBbnpNTIVIXzIhbPPuZ1KCXKASPTR3z3fUN1JrWSRexiBdejrPonhGNMbp7riZGHAphi1rj3n9UH+j9/vaImy+qZbZolp5L6WVMWHrW2YwPYRRuOaPxpqxuAa0SHYxOECEfNmmO+qcgOMVL619Sqnh4JgrYehKaZ36oj+uAdU+iNoXDkIFxRg3PUgSCLSsOmS6xZCBDLLnH0elyXLArDIUKozseLu67w=
+  on:
+    repo: catdad/chord-explorer
