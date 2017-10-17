@@ -9,7 +9,8 @@ import reducer from './reducers';
 import * as types from './constants/actionTypes';
 
 const browserHistory = useBasename(createHashHistory)({
-  basename: process.env.PUBLIC_URL, // eslint-disable-line no-process-env
+  // no basename is necessary with hash history
+  basename: '/', // process.env.PUBLIC_URL, // eslint-disable-line no-process-env
   hashType: 'slash'
 });
 
