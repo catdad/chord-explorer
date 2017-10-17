@@ -3,13 +3,14 @@ import { render } from 'react-dom';
 import { createStore, applyMiddleware } from 'redux';
 import { Provider } from 'react-redux';
 import { Router, Route } from 'react-router';
-import { createHistory, useBasename } from 'history';
+import { createHashHistory, useBasename } from 'history';
 import { App } from './containers';
 import reducer from './reducers';
 import * as types from './constants/actionTypes';
 
-const browserHistory = useBasename(createHistory)({
-  basename: process.env.PUBLIC_URL // eslint-disable-line no-process-env
+const browserHistory = useBasename(createHashHistory)({
+  basename: process.env.PUBLIC_URL, // eslint-disable-line no-process-env
+  hashType: 'slash'
 });
 
 const middleware = (store) => (nextState) => (action) => {
