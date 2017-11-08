@@ -57,7 +57,7 @@ class App extends PureComponent {
             <EmptyChordlist />
         }</div>
         <div className="app-footer-wrap">
-          <span>{ 'Made with 💕 and 🍸 by ' }</span>
+          <span>{ 'Made with 💜 and 🍸 by ' }</span>
           <a href="https://github.com/catdad">{ '@catdad' }</a>
           <span>{ '.' }</span>
         </div>
