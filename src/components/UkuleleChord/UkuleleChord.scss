@@ -17,16 +17,10 @@
     height: 120px;
   }
 
-  .nut {
-    fill: $color-text;
-  }
+  $line-color: mix($color-text, rgba(0, 0, 0, 0), 70);
 
-  .string {
-    fill: darken($color-background, 50%);
-  }
-
-  .fret {
-    fill: $color-text;
+  .nut, .string, .fret {
+    fill: $line-color;
   }
 
   .finger {
