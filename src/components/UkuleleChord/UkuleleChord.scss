@@ -18,7 +18,7 @@
   }
 
   $line-color: mix($color-text, rgba(0, 0, 0, 0), 80);
-  $finger-color: mix($color-accent, $color-negative, 80);
+  $finger-color: mix($color-accent, $color-light, 70);
 
   .nut, .string, .fret {
     fill: $line-color;
@@ -35,6 +35,5 @@
 
   text.finger {
     font-size: 4em;
-    opacity: 0.8;
   }
 }

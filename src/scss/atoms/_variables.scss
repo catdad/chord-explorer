@@ -20,5 +20,6 @@ $color-text       : $off-black;
 
 $color-accent     : $purple;
 $color-link       : mix($color-accent, $color-text, 30);
+$color-light      : $off-white;
 
 $background-accent : mix($color-background, $color-accent, 75);
