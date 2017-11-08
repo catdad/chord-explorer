@@ -17,19 +17,20 @@
     height: 120px;
   }
 
-  $line-color: mix($color-text, rgba(0, 0, 0, 0), 70);
+  $line-color: mix($color-text, rgba(0, 0, 0, 0), 80);
+  $finger-color: mix($color-accent, $color-negative, 80);
 
   .nut, .string, .fret {
     fill: $line-color;
   }
 
   .finger {
-    fill: lighten($color-accent, 10%);
+    fill: $finger-color;
   }
 
   .fret-num {
     font-size: 0.9em;
-    color: $color-accent;
+    color: $finger-color;
   }
 
   text.finger {
