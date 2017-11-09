@@ -1,4 +1,5 @@
 @import "atoms/variables";
+@import "atoms/fonts";
 
 * {
   box-sizing: border-box;
@@ -29,10 +30,13 @@ body {
   background: $color-background;
   color: $color-text;
 
-  font-family: 'Arial', sans-serif;
   font-size: 16px;
 
   line-height: 1.5;
+}
+
+html, body, input {
+  font-family: 'Lato', sans-serif
 }
 
 #root {
