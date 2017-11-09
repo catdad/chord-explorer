@@ -13,8 +13,8 @@ export default function Fingers({ fingers }) {
       <text
         key="?"
         className="finger"
-        x="37"
-        y="73"
+        x="40"
+        y="68"
       >{ '?' }</text>
     );
   } else {
