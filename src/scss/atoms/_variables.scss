@@ -11,8 +11,15 @@ $color-red   : #f00;
 
 // Unnamed colors, use these
 $color-background : $off-white;
+$color-negative   : $off-black;
 $color-text       : $off-black;
-$color-accent     : $purple;
-$color-link       : darken($color-accent, 20%);
 
-$background-accent : desaturate(lighten($color-accent, 60%), 80%);
+//$color-background : $off-black; //$off-white;
+//$color-negative   : $off-white;
+//$color-text       : $off-white; //$off-black;
+
+$color-accent     : $purple;
+$color-link       : mix($color-accent, $color-text, 30);
+$color-light      : $off-white;
+
+$background-accent : mix($color-background, $color-accent, 75);

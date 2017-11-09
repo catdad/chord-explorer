@@ -17,29 +17,23 @@
     height: 120px;
   }
 
-  .nut {
-    fill: $color-text;
-  }
+  $line-color: mix($color-text, rgba(0, 0, 0, 0), 80);
+  $finger-color: mix($color-accent, $color-light, 70);
 
-  .string {
-    fill: darken($color-background, 50%);
-  }
-
-  .fret {
-    fill: $color-text;
+  .nut, .string, .fret {
+    fill: $line-color;
   }
 
   .finger {
-    fill: lighten($color-accent, 10%);
+    fill: $finger-color;
   }
 
   .fret-num {
     font-size: 0.9em;
-    color: $color-accent;
+    color: $finger-color;
   }
 
   text.finger {
     font-size: 4em;
-    opacity: 0.8;
   }
 }
