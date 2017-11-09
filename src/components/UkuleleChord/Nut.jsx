@@ -12,7 +12,7 @@ export default function Nut({ base }) {
           height="1"
         />
         <text
-          className="num"
+          className="fret-num"
           x="88"
           y="18"
         >{ base }</text>
