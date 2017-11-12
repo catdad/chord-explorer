@@ -1,24 +1,24 @@
 // Named colors, don't use these
 $off-white : #efefef;
 $off-black : #121212;
-$purple    : #590059;
 
 // Universal named colors, use these
-$color-white : #fff;
-$color-gray  : #808080;
-$color-black : #000;
-$color-red   : #f00;
+$color-white  : #fff;
+$color-gray   : #808080;
+$color-black  : #000;
+$color-red    : #f00;
+$color-purple : #590059;
 
 // Unnamed colors, use these
 $color-background : $off-white;
 $color-negative   : $off-black;
 $color-text       : $off-black;
 
-//$color-background : $off-black; //$off-white;
+//$color-background : $off-black;
 //$color-negative   : $off-white;
-//$color-text       : $off-white; //$off-black;
+//$color-text       : $off-white;
 
-$color-accent     : $purple;
+$color-accent     : $color-purple;
 $color-link       : mix($color-accent, $color-text, 30);
 $color-light      : $off-white;
 

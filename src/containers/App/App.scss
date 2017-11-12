@@ -4,6 +4,8 @@
 
 @import "molecules/globals";
 
+$accent-shadow: 0 0 10px $color-background, 0 0 10px $color-background;
+
 .app-body {
   position: relative;
   height: 100%;
@@ -16,7 +18,7 @@
   width: 100%;
 
   background-color: $color-background;
-  box-shadow: 0 0 10px $color-background, 0 0 10px $color-background;
+  box-shadow: $accent-shadow;
 
   z-index: 2;
 }
@@ -42,8 +44,8 @@
   text-align: center;
   font-size: 0.9em;
 
-  background-color: $background-accent;
-  box-shadow: 0 0 10px $background-accent, 0 0 10px $background-accent;
+  background-color: $color-background;
+  box-shadow: $accent-shadow;
 
   z-index: 2;
 }
