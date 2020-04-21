@@ -63,7 +63,11 @@ App.propTypes = {
   actions: PropTypes.objectOf(PropTypes.func).isRequired,
   params: PropTypes.shape({
     chordstring: PropTypes.string
-  }).isRequired
+  })
+};
+
+App.defaultProps = {
+  params: {}
 };
 
 const mapStateToProps = ({ chords }) => ({
