@@ -7,18 +7,6 @@ import * as actionCreators from '../../actions';
 import './App.scss';
 
 class App extends PureComponent {
-  static propTypes = {
-    chords: PropTypes.shape({
-      value: PropTypes.string.isRequired,
-      array: PropTypes.arrayOf(PropTypes.string).isRequired,
-      sanitized: PropTypes.string.isRequired
-    }).isRequired,
-    actions: PropTypes.objectOf(PropTypes.func).isRequired,
-    params: PropTypes.shape({
-      chordstring: PropTypes.string
-    }).isRequired
-  };
-
   constructor(props) {
     super(props);
 
@@ -65,6 +53,18 @@ class App extends PureComponent {
     );
   }
 }
+
+App.propTypes = {
+  chords: PropTypes.shape({
+    value: PropTypes.string.isRequired,
+    array: PropTypes.arrayOf(PropTypes.string).isRequired,
+    sanitized: PropTypes.string.isRequired
+  }).isRequired,
+  actions: PropTypes.objectOf(PropTypes.func).isRequired,
+  params: PropTypes.shape({
+    chordstring: PropTypes.string
+  }).isRequired
+};
 
 const mapStateToProps = ({ chords }) => ({
   chords

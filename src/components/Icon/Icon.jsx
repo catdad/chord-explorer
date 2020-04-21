@@ -4,16 +4,6 @@ import * as icons from '../../constants/icons';
 import './Icon.scss';
 
 export default class Icon extends PureComponent {
-  static propTypes = {
-    name: PropTypes.string.isRequired,
-    size: PropTypes.number,
-    viewBox: PropTypes.string
-  };
-  static defaultProps = {
-    size: 24,
-    viewBox: '0 0 36 36'
-  };
-
   render() {
     const { name, size, viewBox, ...restProps } = this.props;
 
@@ -30,3 +20,14 @@ export default class Icon extends PureComponent {
     );
   }
 }
+
+Icon.propTypes = {
+  name: PropTypes.string.isRequired,
+  size: PropTypes.number,
+  viewBox: PropTypes.string
+};
+
+Icon.defaultProps = {
+  size: 24,
+  viewBox: '0 0 36 36'
+};

@@ -12,13 +12,6 @@ function capitalize(str) {
 }
 
 export default class UkuleleChord extends PureComponent {
-  static propTypes = {
-    name: PropTypes.string
-  };
-  static defaultProps = {
-    name: 'open'
-  };
-
   render() {
     const { name } = this.props;
     const fingering = chords.get({ name });
@@ -53,3 +46,11 @@ export default class UkuleleChord extends PureComponent {
     );
   }
 }
+
+UkuleleChord.propTypes = {
+  name: PropTypes.string
+};
+
+UkuleleChord.defaultProps = {
+  name: 'open'
+};
