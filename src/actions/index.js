@@ -32,8 +32,7 @@ export const urlToData = (urlString) => {
   return chordsToData(chords);
 };
 
-export const urlParts = () => {
-  const hash = document.location.hash || '';
+export const urlParts = (hash = document.location.hash) => {
   const match = hash.match(/^#\/([a-z]+)\/([^/]+)$/) || [];
 
   return {

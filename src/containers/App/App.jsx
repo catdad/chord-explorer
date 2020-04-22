@@ -1,4 +1,4 @@
-import React, { useCallback, useState } from 'react';
+import React, { useCallback, useEffect, useState } from 'react';
 import { createHashHistory } from 'history';
 
 import { inputToData, urlToData, urlParts } from '../../actions';
@@ -19,9 +19,19 @@ function App() {
   const [chordState, setChordState] = useState(urlToData(urlParts().chords));
   // const [instrument, setInstrument] = useState(urlParts().instrument);
 
-  const { array: chords, input } = chordState;
+  const { array: chords, input, value } = chordState;
 
   inspect('RENDER APP WITH CHORD STATE', chordState);
+
+  useEffect(() => {
+    const unlisten = history.listen((location) => {
+      const data = urlToData(urlParts(`#${location.pathname}`).chords);
+
+      setChordState(data);
+    });
+
+    return () => unlisten();
+  }, [] /* only execute once */);
 
   const handleChordChange = useCallback((val) => {
     const data = inputToData(val);
@@ -47,7 +57,7 @@ function App() {
         <div className="header-input">
           <ChordInput
             onChange={ handleChordChange }
-            value={ input }
+            value={ input || value }
           />
         </div>
       </div>
