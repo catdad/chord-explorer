@@ -39,7 +39,6 @@ export default function UkuleleChord(props) {
         <Strings />
         <Nut base={ base } />
         <Fingers fingers={ fingers } />
-
       </svg>
     </div>
   );
