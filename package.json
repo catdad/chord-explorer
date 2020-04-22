@@ -48,7 +48,6 @@
     "webpack-dev-server": "^1.16.2"
   },
   "dependencies": {
-    "duration-js": "^3.9.2",
     "history": "^4.10.1",
     "prop-types": "^15.7.2",
     "react": "^16.13.1",
