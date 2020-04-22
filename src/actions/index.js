@@ -11,14 +11,17 @@ const chordsToData = (chords, input = null) => {
 
   return {
     array,
-    value: array.join(', '),
+    value: array.join(' '),
     sanitized: sanitize(array),
-    input: input || array.join(', ')
+    input: input || array.join(' ')
   };
 };
 
 export const inputToData = (chordInput) => {
-  const chords = chordInput.trim().split(',')
+  const chords = chordInput.trim()
+    .replace(/\s*,\s*/, ' ')
+    .replace(/\s+/g, ' ')
+    .split(' ')
     .map((a) => a.trim())
     .filter((a) => !!a);
 
