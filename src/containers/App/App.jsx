@@ -19,7 +19,7 @@ function App() {
   const [chordState, setChordState] = useState(urlToData(urlParts().chords));
   // const [instrument, setInstrument] = useState(urlParts().instrument);
 
-  const { array: chords, input, value } = chordState;
+  const { array: chords, input } = chordState;
 
   inspect('RENDER APP WITH CHORD STATE', chordState);
 
@@ -57,7 +57,7 @@ function App() {
         <div className="header-input">
           <ChordInput
             onChange={ handleChordChange }
-            value={ input || value }
+            value={ input }
           />
         </div>
       </div>
