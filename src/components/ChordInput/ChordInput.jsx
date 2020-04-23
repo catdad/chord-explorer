@@ -1,6 +1,6 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
-import './ChordInput.scss';
+import './ChordInput.css';
 
 export default class ChordInput extends PureComponent {
   constructor(props) {

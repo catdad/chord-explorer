@@ -1,12 +1,6 @@
-@import "atoms/normalize";
-@import "atoms/variables";
-@import "atoms/mixins";
-
-@import "molecules/globals";
-
-$accent-shadow: 0 0 10px $color-background, 0 0 10px $color-background;
-
 .app-body {
+  --accent-shadow: 0 0 10px var(--color-background), 0 0 10px var(--color-background);
+
   position: relative;
   height: 100%;
 }
@@ -17,8 +11,8 @@ $accent-shadow: 0 0 10px $color-background, 0 0 10px $color-background;
   left: 0;
   width: 100%;
 
-  background-color: $color-background;
-  box-shadow: $accent-shadow;
+  background-color: var(--color-background);
+  box-shadow: var(--accent-shadow);
 
   z-index: 2;
 }
@@ -44,8 +38,8 @@ $accent-shadow: 0 0 10px $color-background, 0 0 10px $color-background;
   text-align: center;
   font-size: 0.9em;
 
-  background-color: $color-background;
-  box-shadow: $accent-shadow;
+  background-color: var(--color-background);
+  box-shadow: var(--accent-shadow);
 
   z-index: 2;
 }

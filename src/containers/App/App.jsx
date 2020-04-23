@@ -4,7 +4,7 @@ import { createHashHistory } from 'history';
 import { inputToData, urlToData, urlParts } from '../../actions';
 
 import { UkuleleChord, ChordInput, EmptyChordlist } from '../../components';
-import './App.scss';
+import './App.css';
 
 // eslint-disable-next-line no-console
 const inspect = (...args) => console.log(...args);
