@@ -3,11 +3,6 @@ import PropTypes from 'prop-types';
 import './ChordInput.scss';
 
 export default class ChordInput extends PureComponent {
-  static propTypes = {
-    onChange: PropTypes.func.isRequired,
-    value: PropTypes.string.isRequired
-  };
-
   constructor(props) {
     super(props);
 
@@ -32,3 +27,8 @@ export default class ChordInput extends PureComponent {
     );
   }
 }
+
+ChordInput.propTypes = {
+  onChange: PropTypes.func.isRequired,
+  value: PropTypes.string.isRequired
+};

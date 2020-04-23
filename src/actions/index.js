@@ -1,30 +1,45 @@
-import * as types from '../constants/actionTypes';
-
 function unique(arr) {
   return Array.from(new Set(arr));
 }
 
-function clean(str) {
-  return str
-    .replace(/\s*,\s*/g, ' ')
-    .replace(/\s+/g, ' ')
-    .trim();
+function sanitize(arr) {
+  return arr.join(',').replace(/#/g, '-');
 }
 
-export const setChords = (value) => {
-  const data = {
-    type: types.SET_CHORDS
+const chordsToData = (chords, input = null) => {
+  const array = unique(chords);
+
+  return {
+    array,
+    value: array.join(' '),
+    sanitized: sanitize(array),
+    input: input || array.join(' ')
   };
-
-  if (Array.isArray(value)) {
-    data.array = unique(value);
-    data.value = data.array.join(' ');
-  } else {
-    data.value = value;
-    data.array = unique(clean(value).split(' '));
-  }
-
-  return data;
 };
 
-export const setChordstring = (value) => setChords(value.replace(/-/gi, '#').replace(/,/g, ' '));
+export const inputToData = (chordInput) => {
+  const chords = chordInput.trim()
+    .replace(/\s*,\s*/, ' ')
+    .replace(/\s+/g, ' ')
+    .split(' ')
+    .map((a) => a.trim())
+    .filter((a) => !!a);
+
+  return chordsToData(chords, chordInput);
+};
+
+export const urlToData = (urlString) => {
+  const chords = urlString.replace(/-/gi, '#').split(',')
+    .filter((a) => !!a);
+
+  return chordsToData(chords);
+};
+
+export const urlParts = (hash = document.location.hash) => {
+  const match = hash.match(/^#\/([a-z]+)\/([^/]+)$/) || [];
+
+  return {
+    instrument: match[1] || 'ukulele',
+    chords: match[2] || ''
+  };
+};
