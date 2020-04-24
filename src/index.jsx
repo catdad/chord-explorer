@@ -1,7 +1,7 @@
 import React from 'react';
 import { render } from 'react-dom';
 
-import { App } from './containers';
+import App from './components/App/App';
 import './global.css';
 
 render(

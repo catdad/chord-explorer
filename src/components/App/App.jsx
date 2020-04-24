@@ -3,7 +3,10 @@ import { createHashHistory } from 'history';
 
 import { inputToData, urlToData, urlParts } from '../../actions';
 
-import { UkuleleChord, ChordInput, EmptyChordlist } from '../../components';
+import UkuleleChord from '../UkuleleChord/UkuleleChord';
+import ChordInput from '../ChordInput/ChordInput';
+import EmptyChordlist from '../EmptyChordlist/EmptyChordlist';
+
 import './App.css';
 
 // eslint-disable-next-line no-console

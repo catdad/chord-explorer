@@ -36,3 +36,5 @@ Temporary Items
 node_modules/
 coverage/
 build/
+dist/
+.cache/
