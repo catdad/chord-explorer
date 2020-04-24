@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import * as icons from '../../constants/icons';
-import './Icon.scss';
+import './Icon.css';
 
 export default function Icon(props) {
   const { name, size, viewBox, ...restProps } = props;

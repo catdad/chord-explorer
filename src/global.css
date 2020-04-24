@@ -1,0 +1,103 @@
+:root {
+  /* Named colors, don't use these */
+  --off-white : #efefef;
+  --off-black : #121212;
+
+  /* Universal named colors, use these */
+  --color-white  : #fff;
+  --color-gray   : #808080;
+  --color-black  : #000;
+  --color-red    : #f00;
+  --color-purple : #590059;
+
+  /* Unnamed colors, use these */
+  --color-background : var(--off-white);
+  --color-negative   : var(--off-black);
+  --color-text       : var(--off-black);
+
+  --color-accent     : var(--color-purple);
+  --color-link       : #270d27;
+  --color-light      : var(--off-white);
+}
+
+/* latin-ext */
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Lato Regular'), local('Lato-Regular'), url(https://fonts.gstatic.com/s/lato/v14/UyBMtLsHKBKXelqf4x7VRQ.woff2) format('woff2');
+  unicode-range: U+0100-024F, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Lato Regular'), local('Lato-Regular'), url(https://fonts.gstatic.com/s/lato/v14/1YwB1sO8YE1Lyjf12WNiUA.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.clear {
+  clear: both;
+}
+
+img {
+  height: auto;
+  max-width: 100%;
+}
+
+svg,
+embed,
+iframe,
+object,
+video {
+  max-width: 100%;
+}
+
+html,
+body {
+  position: relative;
+  height: 100%;
+
+  background: var(--color-background);
+  color: var(--color-text);
+
+  font-size: 16px;
+
+  line-height: 1.5;
+  padding: 0;
+  margin: 0;
+}
+
+html, body, input {
+  font-family: 'Lato', sans-serif
+}
+
+#root {
+  position: relative;
+  height: 100%;
+}
+
+a {
+  border-bottom: 1px solid currentColor;
+  color: var(--color-link);
+  outline: none;
+  text-decoration: none;
+  transition: background 150ms, border-color 250ms, color 250ms, opacity 250ms;
+}
+
+p:first-child {
+  margin-top: 0;
+}
+
+p:last-child {
+  margin-bottom: 0;
+}
+
+svg {
+  fill: currentColor;
+}

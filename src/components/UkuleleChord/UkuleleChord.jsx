@@ -1,6 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import './UkuleleChord.scss';
+
+import './UkuleleChord.css';
+
 import Nut from './Nut.jsx';
 import Strings from './Strings.jsx';
 import Frets from './Frets.jsx';

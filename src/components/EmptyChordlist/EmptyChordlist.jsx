@@ -1,6 +1,7 @@
 import React from 'react';
 import { Icon } from '../../components';
-import './EmptyChordlist.scss';
+
+import './EmptyChordlist.css';
 
 export default function EmptyChordlist() {
   return (

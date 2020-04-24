@@ -1,8 +1,0 @@
-
-// A mixin to add a media query for when we switch to the vertical layout
-@mixin vertical-layout() {
-
-  @media (max-aspect-ratio: 13/9), (min-height: 550px) {
-    @content;
-  }
-}
