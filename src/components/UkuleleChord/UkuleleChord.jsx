@@ -6,7 +6,7 @@ import Nut from './Nut.jsx';
 import Strings from './Strings.jsx';
 import Frets from './Frets.jsx';
 import Fingers from './Fingers.jsx';
-import { getChord } from './chords.js';
+import { get as getChord } from './chords.js';
 
 function capitalize(str) {
   return str.charAt(0).toUpperCase() + str.slice(1);
