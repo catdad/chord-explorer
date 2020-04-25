@@ -11,7 +11,7 @@
   "devDependencies": {
     "@babel/core": "^7.9.0",
     "babel-preset-react-app": "^9.1.2",
-    "eslint": "^3.14.0",
+    "eslint": "^5.16.0",
     "eslint-config-stezu": "^1.0.4",
     "eslint-loader": "^1.6.1",
     "eslint-plugin-react": "^6.9.0",
