@@ -16,6 +16,14 @@
   flex-grow: 1;
 }
 
+.app-body-wrap.empty {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
 .app-footer-wrap {
   flex-grow: 0;
   padding: 4px 0;

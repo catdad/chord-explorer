@@ -56,7 +56,7 @@ function App() {
           />
         </div>
       </div>
-      <div className="app-body-wrap">{
+      <div className={ `app-body-wrap ${chords.length === 0 ? 'empty' : ''}` }>{
         chordElems.length ?
           <div className="chord-body">{ chordElems }</div> :
           <EmptyChordlist />
