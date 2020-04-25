@@ -1,11 +1,10 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
 const STRINGSIZE = 20;
 const FRETSIZE = 99 / 4;
 const RADIUS = 5;
 
-export default function Fingers({ fingers }) {
+export default function Fingers({ fingers = null } = {}) {
   const elems = [];
 
   if (fingers === null || !fingers.length) {
@@ -41,11 +40,3 @@ export default function Fingers({ fingers }) {
     <g>{ elems }</g>
   );
 }
-
-Fingers.propTypes = {
-  fingers: PropTypes.arrayOf(PropTypes.number)
-};
-
-Fingers.defaultProps = {
-  fingers: null
-};
