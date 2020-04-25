@@ -1,7 +1,6 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
-export default function Nut({ base }) {
+export default function Nut({ base = 0 } = {}) {
   if (base) {
     return (
       <g>
@@ -37,11 +36,3 @@ export default function Nut({ base }) {
     </g>
   );
 }
-
-Nut.propTypes = {
-  base: PropTypes.number
-};
-
-Nut.defaultProps = {
-  base: 0
-};
