@@ -9,9 +9,6 @@ import EmptyChordlist from '../EmptyChordlist/EmptyChordlist';
 
 import './App.css';
 
-// eslint-disable-next-line no-console
-const inspect = (...args) => console.log(...args);
-
 const history = createHashHistory({
   // no basename is necessary with hash history
   basename: '/',
@@ -23,8 +20,6 @@ function App() {
   // const [instrument, setInstrument] = useState(urlParts().instrument);
 
   const { array: chords, input } = chordState;
-
-  inspect('RENDER APP WITH CHORD STATE', chordState);
 
   useEffect(() => {
     const unlisten = history.listen((location) => {
@@ -41,8 +36,6 @@ function App() {
     const data = inputToData(val);
 
     if (chordState.sanitized !== data.sanitized) {
-      inspect('chord change', val, data);
-
       // we'll replace the state when chords are updated, to avoid having
       // a brand new history entry every time the user types a character
       history.replace(`/ukulele/${data.sanitized}`, { chords: data });
@@ -52,8 +45,6 @@ function App() {
   });
 
   const chordElems = chords.map((name) => (<UkuleleChord key={ name } name={ name } />));
-
-  inspect('chords:', chordElems.length);
 
   return (
     <div className="app-body">
