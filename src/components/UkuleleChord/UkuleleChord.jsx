@@ -6,14 +6,14 @@ import Nut from './Nut.jsx';
 import Strings from './Strings.jsx';
 import Frets from './Frets.jsx';
 import Fingers from './Fingers.jsx';
-import * as chords from './chords.js';
+import { getChord } from './chords.js';
 
 function capitalize(str) {
   return str.charAt(0).toUpperCase() + str.slice(1);
 }
 
 export default function UkuleleChord({ name = 'open' } = {}) {
-  const fingering = chords.get({ name });
+  const fingering = getChord({ name });
   let fingers = fingering ? fingering.split('').map(Number) : [];
   const min = Math.min(...fingers);
   const max = Math.max(...fingers);
