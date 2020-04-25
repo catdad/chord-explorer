@@ -6,7 +6,7 @@
   "description": "",
   "scripts": {
     "build": "parcel build src/index.html --public-url \"./\" --no-cache --experimental-scope-hoisting",
-    "start": "parcel serve src/index.html"
+    "start": "parcel src/index.html"
   },
   "devDependencies": {
     "@babel/core": "^7.9.0",
