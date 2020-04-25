@@ -1,45 +1,28 @@
 .app-body {
-  --accent-shadow: 0 0 10px var(--color-background), 0 0 10px var(--color-background);
-
   position: relative;
-  height: 100%;
+  max-width: 900px;
+  min-height: 100%;
+  border: 1px solid red;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
 }
 
 .app-header-wrap {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-
+  flex-grow: 0;
   background-color: var(--color-background);
-  box-shadow: var(--accent-shadow);
-
-  z-index: 2;
 }
 
 .app-body-wrap {
-  position: relative;
-  padding-top: 80px;
-  padding-bottom: 32px;
-
-  height: auto;
-  min-height: 100%;
-
-  z-index: 0;
+  flex-grow: 1;
 }
 
 .app-footer-wrap {
-  position: fixed;
-  left: 0;
-  bottom: 0;
-  width: 100%;
+  flex-grow: 0;
   padding: 4px 0;
 
   text-align: center;
   font-size: 0.9em;
 
   background-color: var(--color-background);
-  box-shadow: var(--accent-shadow);
-
-  z-index: 2;
 }
