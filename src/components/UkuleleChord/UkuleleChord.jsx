@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
 import './UkuleleChord.css';
 
@@ -13,8 +12,7 @@ function capitalize(str) {
   return str.charAt(0).toUpperCase() + str.slice(1);
 }
 
-export default function UkuleleChord(props) {
-  const { name } = props;
+export default function UkuleleChord({ name = 'open' } = {}) {
   const fingering = chords.get({ name });
   let fingers = fingering ? fingering.split('').map(Number) : [];
   const min = Math.min(...fingers);
@@ -45,11 +43,3 @@ export default function UkuleleChord(props) {
     </div>
   );
 }
-
-UkuleleChord.propTypes = {
-  name: PropTypes.string
-};
-
-UkuleleChord.defaultProps = {
-  name: 'open'
-};

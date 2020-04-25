@@ -1,31 +1,17 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import * as icons from '../../constants/icons';
 import './Icon.css';
 
-export default function Icon(props) {
-  const { name, size, viewBox, ...restProps } = props;
-
+export default function Icon({ name, size = 24, viewBox = '0 0 36 36', ...props } = {}) {
   return (
     <svg
       className="icon"
       width={ size }
       height={ size }
       viewBox={ viewBox }
-      { ...restProps }
+      { ...props }
     >
       <path d={ icons[name.toUpperCase()] } />
     </svg>
   );
 }
-
-Icon.propTypes = {
-  name: PropTypes.string.isRequired,
-  size: PropTypes.number,
-  viewBox: PropTypes.string
-};
-
-Icon.defaultProps = {
-  size: 24,
-  viewBox: '0 0 36 36'
-};
