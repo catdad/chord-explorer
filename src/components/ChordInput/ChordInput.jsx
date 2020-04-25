@@ -1,34 +1,17 @@
-import React, { PureComponent } from 'react';
-import PropTypes from 'prop-types';
+import React from 'react';
 import './ChordInput.css';
 
-export default class ChordInput extends PureComponent {
-  constructor(props) {
-    super(props);
+// eslint-disable-next-line no-empty-function
+const noop = () => {};
 
-    this.handleChange = this.handleChange.bind(this);
-  }
-
-  handleChange(ev) {
-    const { onChange } = this.props;
-
-    onChange(ev.target.value);
-  }
-
-  render() {
-    return (
-      <div className="chord-input">
-        <input
-          onChange={ this.handleChange }
-          placeholder="Chord list"
-          value={ this.props.value }
-        />
-      </div>
-    );
-  }
+export default function ChordInput({ value = '', onChange = noop } = {}) {
+  return (
+    <div className="chord-input">
+      <input
+        onChange={ onChange }
+        placeholder="Chord list"
+        value={ value }
+      />
+    </div>
+  );
 }
-
-ChordInput.propTypes = {
-  onChange: PropTypes.func.isRequired,
-  value: PropTypes.string.isRequired
-};

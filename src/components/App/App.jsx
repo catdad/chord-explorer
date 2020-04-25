@@ -36,7 +36,8 @@ function App() {
     return () => unlisten();
   }, [] /* only execute once */);
 
-  const handleChordChange = useCallback((val) => {
+  const onChage = useCallback((ev) => {
+    const val = ev.target.value;
     const data = inputToData(val);
 
     if (chordState.sanitized !== data.sanitized) {
@@ -59,7 +60,7 @@ function App() {
       <div className="app-header-wrap">
         <div className="header-input">
           <ChordInput
-            onChange={ handleChordChange }
+            onChange={ onChage }
             value={ input }
           />
         </div>
