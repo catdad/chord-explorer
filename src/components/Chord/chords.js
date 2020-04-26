@@ -19,7 +19,7 @@ const ALTROOT = {
   'ab': 'g#'
 };
 
-const CHORDS = {
+const UKULELE = {
   // A
   'a': '2100',
   'a7': '0100',
@@ -132,8 +132,18 @@ const CHORDS = {
   'open': '0000'
 };
 
-function parse(chord) {
+const GUITAR = {
+  'a': '002220',
+  'c': '032010',
+  'd': '000232',
+  'e': '022100',
+  'f': '133211',
+  'g': '320003'
+};
+
+function parse(chord, instrument) {
   const str = chord.toLowerCase();
+  const CHORDS = instrument === 'ukulele' ? UKULELE : GUITAR;
 
   const match = str.match(chordRegex());
 
@@ -158,8 +168,8 @@ function parse(chord) {
   };
 }
 
-export function get({ name }) {
-  const chord = parse(name);
+export function get({ name, instrument = 'ukulele' }) {
+  const chord = parse(name, instrument);
 
   return chord.chord || chord.altchord;
 }

@@ -13,8 +13,8 @@ function capitalize(str) {
 const instrument = 'guitar';
 
 export default function GuitarChord({ name = 'open' } = {}) {
-  const fingering = getChord({ name });
-  let fingers = fingering ? `00${fingering}`.split('').map(Number) : [];
+  const fingering = getChord({ name, instrument });
+  let fingers = fingering ? fingering.split('').map(Number) : [];
   const min = Math.min(...fingers.filter((i) => i > 0));
   const max = Math.max(...fingers);
   let base = 0;
