@@ -1,38 +1,38 @@
 import React from 'react';
 
-export default function Nut({ base = 0 } = {}) {
+const wrap = (...elems) => (<g className="nut">{ elems }</g>);
+
+export default function Nut({ base = 0, instrument = 'ukulele' } = {}) {
+  const start = instrument === 'ukulele' ? 20 : 10;
+
   if (base) {
-    return (
-      <g>
-        <rect
-          className="nut"
-          x="20" y="2"
-          width="60"
-          height="1"
-        />
-        <text
-          className="fret-num"
-          x="88"
-          y="18"
-        >{ base }</text>
-      </g>
+    return wrap(
+      <rect
+        className="nut"
+        x={ `${start}` } y="2"
+        width={ `${100 - start - start}` }
+        height="1"
+      />,
+      <text
+        className="fret-num"
+        x="88"
+        y="18"
+      >{ base }</text>
     );
   }
 
-  return (
-    <g>
-      <rect
-        className="nut"
-        x="20" y="0"
-        width="60"
-        height="2"
-      />
-      <rect
-        className="nut"
-        x="20" y="3"
-        width="60"
-        height="1"
-      />
-    </g>
+  return wrap(
+    <rect
+      className="nut"
+      x={ `${start}` } y="0"
+      width={ `${100 - start - start}` }
+      height="2"
+    />,
+    <rect
+      className="nut"
+      x={ `${start}` } y="3"
+      width={ `${100 - start - start}` }
+      height="1"
+    />
   );
 }

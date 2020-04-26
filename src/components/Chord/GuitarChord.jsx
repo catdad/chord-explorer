@@ -15,7 +15,7 @@ const instrument = 'guitar';
 export default function GuitarChord({ name = 'open' } = {}) {
   const fingering = getChord({ name });
   let fingers = fingering ? `00${fingering}`.split('').map(Number) : [];
-  const min = Math.min(...fingers);
+  const min = Math.min(...fingers.filter((i) => i > 0));
   const max = Math.max(...fingers);
   let base = 0;
 
@@ -35,9 +35,9 @@ export default function GuitarChord({ name = 'open' } = {}) {
     <div className="chord">
       <h1>{ fingering ? capitalize(name) : name }</h1>
       <svg viewBox="0 0 100 100">
-        <Frets />
+        <Frets instrument={ instrument } />
         <Strings instrument={ instrument } />
-        <Nut base={ base } />
+        <Nut base={ base } instrument={ instrument } />
         <Fingers fingers={ fingers } />
       </svg>
     </div>
