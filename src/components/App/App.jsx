@@ -6,6 +6,7 @@ import { inputToData, urlToData, urlParts } from '../../actions';
 import UkuleleChord from '../UkuleleChord/UkuleleChord';
 import ChordInput from '../ChordInput/ChordInput';
 import EmptyChordlist from '../EmptyChordlist/EmptyChordlist';
+import Instrument from '../Instrument/Instrument';
 
 import './App.css';
 
@@ -48,6 +49,7 @@ function App() {
 
   return (
     <div className="app-body">
+      <Instrument instrument={ 'ukulele' } />
       <ChordInput
         onChange={ onChage }
         value={ input }
