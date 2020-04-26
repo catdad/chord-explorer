@@ -24,7 +24,7 @@
   flex-grow: 1;
 }
 
-.app-footer-wrap {
+footer {
   flex-grow: 0;
   padding: 4px 0;
 

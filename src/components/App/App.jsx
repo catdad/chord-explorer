@@ -57,11 +57,11 @@ function App() {
           <div className="chord-body">{ chordElems }</div> :
           <EmptyChordlist />
       }</div>
-      <div className="app-footer-wrap">
+      <footer>
         <span>{ 'Made with 💜 and 🍸 by ' }</span>
         <a href="https://github.com/catdad">{ '@catdad' }</a>
         <span>{ '.' }</span>
-      </div>
+      </footer>
     </div>
   );
 }
