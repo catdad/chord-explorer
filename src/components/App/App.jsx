@@ -3,7 +3,7 @@ import { createHashHistory } from 'history';
 
 import { inputToData, urlToData, urlParts } from '../../utils.js';
 
-import UkuleleChord from '../UkuleleChord/UkuleleChord';
+import Chord from '../Chord/Chord';
 import ChordInput from '../ChordInput/ChordInput';
 import EmptyChordlist from '../EmptyChordlist/EmptyChordlist';
 import Instrument from '../Instrument/Instrument';
@@ -59,7 +59,9 @@ function App() {
     setInstrument(value);
   });
 
-  const chordElems = chords.map((name) => (<UkuleleChord key={ name } name={ name } />));
+  const chordElems = chords.map((name) => (
+    <Chord key={ `${instrument}-${name}` } name={ name } instrument={ instrument } />
+  ));
 
   return (
     <div className="app-body">
@@ -70,7 +72,7 @@ function App() {
       />
       <div className={ `app-body-wrap ${chords.length === 0 ? 'empty' : ''}` }>{
         chordElems.length ?
-          <div className="chord-body">{ chordElems }</div> :
+          chordElems :
           <EmptyChordlist />
       }</div>
       <footer>
