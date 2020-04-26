@@ -1,7 +1,7 @@
 import React, { useCallback, useEffect, useState } from 'react';
 import { createHashHistory } from 'history';
 
-import { inputToData, urlToData, urlParts } from '../../actions';
+import { inputToData, urlToData, urlParts } from '../../utils.js';
 
 import UkuleleChord from '../UkuleleChord/UkuleleChord';
 import ChordInput from '../ChordInput/ChordInput';
