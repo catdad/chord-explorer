@@ -3,7 +3,7 @@ import React from 'react';
 const FRETSIZE = 99 / 4;
 const RADIUS = 5;
 
-const wrap = (elems) => (<g class="fingers">{ elems }</g>);
+const wrap = (elems) => (<g className="fingers">{ elems }</g>);
 
 export default function Fingers({ fingers = null } = {}) {
   if (fingers === null || !fingers.length) {

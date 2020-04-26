@@ -21,6 +21,6 @@ export default function Strings({ instrument = 'ukulele' } = {}) {
   }
 
   return (
-    <g>{ strings }</g>
+    <g className="strings">{ strings }</g>
   );
 }
