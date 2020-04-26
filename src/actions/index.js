@@ -19,7 +19,7 @@ const chordsToData = (chords, input = null) => {
 
 export const inputToData = (chordInput) => {
   const chords = chordInput.trim()
-    .replace(/\s*,\s*/, ' ')
+    .replace(/,/g, ' ')
     .replace(/\s+/g, ' ')
     .split(' ')
     .map((a) => a.trim())
