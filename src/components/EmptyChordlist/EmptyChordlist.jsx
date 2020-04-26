@@ -1,12 +1,13 @@
 import React from 'react';
 import Icon from '../Icon/Icon';
 
-import './EmptyChordlist.css';
-
 export default function EmptyChordlist() {
   return (
-    <div className="empty-chordlist">
-      <Icon name="ukulele" size={ 100 } viewBox="0 0 100 100" />
-    </div>
+    <Icon
+      name="ukulele"
+      size={ 300 }
+      style={ { fill: 'rgba(89,0,89,.4)' } }
+      viewBox="0 0 100 100"
+    />
   );
 }
