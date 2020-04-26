@@ -18,7 +18,7 @@ const history = createHashHistory({
 
 function App() {
   const [chordState, setChordState] = useState(urlToData(urlParts().chords));
-  // const [instrument, setInstrument] = useState(urlParts().instrument);
+  const [instrument, setInstrument] = useState(urlParts().instrument);
 
   const { array: chords, input } = chordState;
 
@@ -32,26 +32,40 @@ function App() {
     return () => unlisten();
   }, [] /* only execute once */);
 
-  const onChage = useCallback((ev) => {
+  const onChordsChage = useCallback((ev) => {
     const val = ev.target.value;
     const data = inputToData(val);
 
     if (chordState.sanitized !== data.sanitized) {
       // we'll replace the state when chords are updated, to avoid having
       // a brand new history entry every time the user types a character
-      history.replace(`/ukulele/${data.sanitized}`, { chords: data });
+      history.replace(`/${instrument}/${data.sanitized}`, {
+        chords: data,
+        instrument
+      });
     }
 
     setChordState(data);
+  });
+
+  const onInstrumentChange = useCallback((ev) => {
+    const value = ev.target.value;
+
+    history.replace(`/${value}/${chordState.sanitized}`, {
+      chords: chordState,
+      instrument: value
+    });
+
+    setInstrument(value);
   });
 
   const chordElems = chords.map((name) => (<UkuleleChord key={ name } name={ name } />));
 
   return (
     <div className="app-body">
-      <Instrument instrument={ 'ukulele' } />
+      <Instrument instrument={ instrument } onChange={ onInstrumentChange } />
       <ChordInput
-        onChange={ onChage }
+        onChange={ onChordsChage }
         value={ input }
       />
       <div className={ `app-body-wrap ${chords.length === 0 ? 'empty' : ''}` }>{
