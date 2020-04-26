@@ -1,4 +1,4 @@
-.ukulele-chord {
+.chord {
   display: inline-block;
   margin: 10px;
 
@@ -6,7 +6,7 @@
   --finger-color: #864886;
 }
 
-.ukulele-chord h1 {
+.chord h1 {
   padding: 0;
   margin: 0;
   font-size: 1em;
@@ -14,27 +14,27 @@
   text-align: center;
 }
 
-.ukulele-chord svg {
+.chord svg {
   width: 120px;
   height: 120px;
 }
 
-.ukulele-chord .nut,
-.ukulele-chord .string,
-.ukulele-chord .fret {
+.chord .nut,
+.chord .string,
+.chord .fret {
   fill: var(--line-color);
 }
 
-.ukulele-chord .finger {
+.chord .finger {
   fill: var(--finger-color);
 }
 
-.ukulele-chord .fret-num {
+.chord .fret-num {
   font-size: 0.9em;
   font-weight: bold;
   color: var(--finger-color);
 }
 
-.ukulele-chord text.finger {
+.chord text.finger {
   font-size: 3em;
 }

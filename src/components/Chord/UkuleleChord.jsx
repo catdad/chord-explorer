@@ -1,7 +1,5 @@
 import React from 'react';
 
-import './UkuleleChord.css';
-
 import Nut from './Nut.jsx';
 import Strings from './Strings.jsx';
 import Frets from './Frets.jsx';
@@ -32,7 +30,7 @@ export default function UkuleleChord({ name = 'open' } = {}) {
   }
 
   return (
-    <div className="ukulele-chord">
+    <div className="chord">
       <h1>{ fingering ? capitalize(name) : name }</h1>
       <svg viewBox="0 0 100 100">
         <Frets />
