@@ -1,7 +1,7 @@
 import React from 'react';
 
 import GuitarChord from './GuitarChord.jsx';
-import UkuleleChord from '../UkuleleChord/UkuleleChord.jsx';
+import UkuleleChord from './UkuleleChord.jsx';
 
 export default function Chord({ instrument = 'ukulele', name = 'open' } = {}) {
   return (
