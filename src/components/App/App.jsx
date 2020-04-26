@@ -48,14 +48,10 @@ function App() {
 
   return (
     <div className="app-body">
-      <div className="app-header-wrap">
-        <div className="header-input">
-          <ChordInput
-            onChange={ onChage }
-            value={ input }
-          />
-        </div>
-      </div>
+      <ChordInput
+        onChange={ onChage }
+        value={ input }
+      />
       <div className={ `app-body-wrap ${chords.length === 0 ? 'empty' : ''}` }>{
         chordElems.length ?
           <div className="chord-body">{ chordElems }</div> :
