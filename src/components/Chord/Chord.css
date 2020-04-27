@@ -34,6 +34,7 @@
   font-size: 0.9em;
   font-weight: bold;
   color: var(--finger-color);
+  fill: var(--finger-color);
 }
 
 .chord text.finger {

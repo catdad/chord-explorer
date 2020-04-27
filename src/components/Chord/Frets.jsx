@@ -19,6 +19,6 @@ export default function Frets({ instrument = 'ukulele' } = {}) {
   }
 
   return (
-    <g>{ frets }</g>
+    <g className="frets">{ frets }</g>
   );
 }
