@@ -52,7 +52,7 @@ export default function Fingers({ fingers = null } = {}) {
       );
     }
 
-    const { x, y } = position(1, i, interval, start);
+    const { x, y } = position(fret, i, interval, start);
 
     return (
       <circle
