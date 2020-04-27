@@ -39,3 +39,8 @@
 .chord text.finger {
   font-size: 3em;
 }
+
+.chord path.mute {
+  stroke-width: 2;
+  stroke: var(--finger-color);
+}
