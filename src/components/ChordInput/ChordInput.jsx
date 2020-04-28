@@ -1,8 +1,6 @@
 import React from 'react';
 import './ChordInput.css';
-
-// eslint-disable-next-line no-empty-function
-const noop = () => {};
+import { noop } from '../../utils.js';
 
 export default function ChordInput({ value = '', onChange = noop } = {}) {
   return (

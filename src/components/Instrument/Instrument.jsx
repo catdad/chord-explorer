@@ -1,6 +1,5 @@
 import React from 'react';
-
-const noop = () => {};
+import { noop } from '../../utils.js';
 
 function input({ name, checked, onChange }) {
   return (
