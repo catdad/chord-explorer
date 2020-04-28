@@ -1,33 +1,22 @@
-import React from 'react';
+import React, { useCallback } from 'react';
+import Switch from '@material-ui/core/Switch';
 import { noop } from '../../utils.js';
 
-function input({ name, checked, onChange }) {
-  return (
-    <label key={ `instrument-${name}` }>
-      <input
-        type="radio"
-        name="instrument"
-        id={ name }
-        value={ name }
-        onChange={ onChange }
-        checked={ checked }
-      />
-      { name }
-    </label>
-  );
-}
-
 export default function Instrument({ instrument = 'ukulele', onChange = noop } = {}) {
-  return [
-    input({
-      name: 'ukulele',
-      onChange,
-      checked: instrument === 'ukulele'
-    }),
-    input({
-      name: 'guitar',
-      onChange,
-      checked: instrument === 'guitar'
-    })
-  ];
+  const onSwitchChange = useCallback((ev) => {
+    const checked = ev.target.checked;
+    const value = checked ? 'guitar' : 'ukulele';
+
+    if (instrument !== value) {
+      onChange({ target: { value } });
+    }
+  }, [onChange]);
+
+  return (
+    <div>
+      <span>{ 'Ukulele' }</span>
+      <Switch checked={ instrument === 'guitar' } onChange={ onSwitchChange } />
+      <span>{ 'Guitar' }</span>
+    </div>
+  );
 }
