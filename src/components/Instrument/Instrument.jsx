@@ -1,22 +1,33 @@
 import React, { useCallback } from 'react';
-import Switch from '@material-ui/core/Switch';
+import ButtonGroup from '@material-ui/core/ButtonGroup';
+import Button from '@material-ui/core/Button';
+
 import { noop } from '../../utils.js';
 
-export default function Instrument({ instrument = 'ukulele', onChange = noop } = {}) {
-  const onSwitchChange = useCallback((ev) => {
-    const checked = ev.target.checked;
-    const value = checked ? 'guitar' : 'ukulele';
+const next = {
+  ukulele: 'guitar',
+  guitar: 'ukulele'
+};
 
-    if (instrument !== value) {
-      onChange({ target: { value } });
-    }
+export default function Instrument({ instrument = 'ukulele', onChange = noop } = {}) {
+  const onSelected = useCallback(() => {
+    onChange({ target: { value: next[instrument] } });
   }, [onChange]);
 
   return (
-    <div>
-      <span>{ 'Ukulele' }</span>
-      <Switch checked={ instrument === 'guitar' } onChange={ onSwitchChange } />
-      <span>{ 'Guitar' }</span>
-    </div>
+    <ButtonGroup>
+      <Button
+        color="primary"
+        variant={ instrument === 'ukulele' ? 'contained' : 'outlined' }
+        onClick={ onSelected }
+        disableElevation
+      >{ 'Ukulele' }</Button>
+      <Button
+        color="primary"
+        variant={ instrument === 'guitar' ? 'contained' : 'outlined' }
+        onClick={ onSelected }
+        disableElevation
+      >{ 'Guitar' }</Button>
+    </ButtonGroup>
   );
 }
