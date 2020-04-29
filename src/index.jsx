@@ -6,11 +6,13 @@ import App from './components/App/App';
 import './global.css';
 
 const style = getComputedStyle(document.documentElement);
+const getVar = (name) => style.getPropertyValue(name).trim();
 
 const theme = createMuiTheme({
   palette: {
-    primary: { main: style.getPropertyValue('--primary').trim() },
-    secondary: { main: style.getPropertyValue('--secondary').trim() }
+    primary: { main: getVar('--primary') },
+    secondary: { main: getVar('--secondary') },
+    text: { primary: getVar('--color-text') }
   }
 });
 
