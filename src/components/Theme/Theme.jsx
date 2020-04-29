@@ -5,13 +5,11 @@ import { noop } from '../../utils.js';
 
 const getVar = (style, name) => style.getPropertyValue(name).trim();
 
-const darkModeMedia = window.matchMedia ?
-  window.matchMedia('(prefers-color-scheme: dark)') :
-  {
-    matches: false,
-    addListener: noop,
-    removeListener: noop
-  };
+const darkModeMedia = window.matchMedia ? window.matchMedia('(prefers-color-scheme: dark)') : {
+  matches: false,
+  addListener: noop,
+  removeListener: noop
+};
 
 export default function Theme({ children = []} = {}) {
   const [isDarkMode, setDarkMode] = useState(darkModeMedia.matches);
