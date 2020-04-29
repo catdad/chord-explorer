@@ -2,8 +2,8 @@
   display: inline-block;
   margin: 10px;
 
-  --line-color: rgba(18, 18, 18, 0.8);
-  --finger-color: #864886;
+  --line-color: var(--color-text);
+  --finger-color: var(--secondary);
 }
 
 .chord h1 {

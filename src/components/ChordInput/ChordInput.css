@@ -2,8 +2,8 @@
   width: 100%;
   padding: 10px 0;
 
-  --font-color: #a478a4;
-  --back-color: #360936;
+  --font-color: var(--color-light);
+  --back-color: var(--primary);
 }
 
 .chord-input input {
