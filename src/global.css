@@ -15,7 +15,6 @@
   --secondary: #808080;
 }
 
-/*
 @media (prefers-color-scheme: dark) {
   :root {
     --color-background : var(--color-off-black);
@@ -23,7 +22,6 @@
     --color-text       : var(--color-off-white);
   }
 }
-*/
 
 /* latin-ext */
 @font-face {

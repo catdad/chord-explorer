@@ -7,11 +7,11 @@ import './global.css';
 
 const style = getComputedStyle(document.documentElement);
 const getVar = (name) => style.getPropertyValue(name).trim();
-// const userPrefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+const userPrefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
 
 const theme = createMuiTheme({
   palette: {
-    type: 'light', // userPrefersDark ? 'dark' : 'light',
+    type: userPrefersDark ? 'dark' : 'light',
     primary: { main: getVar('--primary') },
     secondary: { main: getVar('--secondary') },
     text: { primary: getVar('--color-text') },
