@@ -3,7 +3,7 @@
   margin: 10px;
 
   --line-color: var(--color-text);
-  --finger-color: var(--secondary);
+  --finger-color: var(--primary);
 }
 
 .chord h1 {

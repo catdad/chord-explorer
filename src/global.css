@@ -3,18 +3,24 @@
   --color-off-white : #efefef;
   --color-off-black : #121212;
   --color-purple    : #360936;
+  --color-purple-2  : #864886;
 
   /* Unnamed colors, use these */
   --color-background : var(--color-off-white);
   --color-negative   : var(--color-off-black);
   --color-text       : var(--color-off-black);
-
-  --color-accent     : var(--color-purple);
   --color-link       : var(--color-text);
-  --color-light      : #864886;
 
-  --primary: var(--color-purple);
-  --secondary: var(--color-light);
+  --primary: var(--color-purple-2);
+  --secondary: #808080;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-background : var(--color-off-black);
+    --color-negative   : var(--color-off-white);
+    --color-text       : var(--color-off-white);
+  }
 }
 
 /* latin-ext */
