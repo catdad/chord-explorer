@@ -3,6 +3,7 @@ import ButtonGroup from '@material-ui/core/ButtonGroup';
 import Button from '@material-ui/core/Button';
 
 import { noop } from '../../utils.js';
+import './Instrument.css';
 
 const next = {
   ukulele: 'guitar',
@@ -15,7 +16,7 @@ export default function Instrument({ instrument = 'ukulele', onChange = noop } =
   }, [onChange]);
 
   return (
-    <ButtonGroup>
+    <ButtonGroup className="instrument-input">
       <Button
         color="primary"
         variant={ instrument === 'ukulele' ? 'contained' : 'outlined' }
