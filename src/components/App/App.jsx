@@ -33,7 +33,7 @@ function App() {
     });
 
     return () => unlisten();
-  }, [] /* only execute once */);
+  }, [/* execute once */]);
 
   const onChordsChage = useCallback((ev) => {
     const val = ev.target.value;
