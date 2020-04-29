@@ -19,6 +19,7 @@
     "parcel-plugin-html-externals": "^0.2.0"
   },
   "dependencies": {
+    "@material-ui/core": "^4.9.12",
     "history": "^4.10.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1"

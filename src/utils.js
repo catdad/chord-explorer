@@ -43,3 +43,6 @@ export const urlParts = (hash = document.location.hash) => {
     chords: match[2] || ''
   };
 };
+
+// eslint-disable-next-line no-empty-function
+export const noop = () => {};

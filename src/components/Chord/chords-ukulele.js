@@ -1,25 +1,4 @@
-function chordRegex() {
-  return /^([a-g][#b]?)([a-z0-9]*)/i;
-}
-
-const ALTROOT = {
-  'a#': 'bb',
-  'bb': 'a#',
-
-  'c#': 'db',
-  'db': 'c#',
-
-  'd#': 'eb',
-  'eb': 'd#',
-
-  'f#': 'gb',
-  'gb': 'f#',
-
-  'g#': 'ab',
-  'ab': 'g#'
-};
-
-const CHORDS = {
+export default {
   // A
   'a': '2100',
   'a7': '0100',
@@ -131,35 +110,3 @@ const CHORDS = {
   // special names
   'open': '0000'
 };
-
-function parse(chord) {
-  const str = chord.toLowerCase();
-
-  const match = str.match(chordRegex());
-
-  if (!match) {
-    return {
-      name: chord,
-      chord: CHORDS[str]
-    };
-  }
-
-  const root = match[1];
-  const mod = match[2] || '';
-  const altroot = ALTROOT[root] || root;
-
-  return {
-    name: chord,
-    root,
-    altroot,
-    mod,
-    chord: CHORDS[str],
-    altchord: CHORDS[altroot + mod]
-  };
-}
-
-export function get({ name }) {
-  const chord = parse(name);
-
-  return chord.chord || chord.altchord;
-}

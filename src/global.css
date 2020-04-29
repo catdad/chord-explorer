@@ -1,24 +1,29 @@
 :root {
   /* Named colors, don't use these */
-  --off-white : #efefef;
-  --off-black : #121212;
-
-  /* Universal named colors, use these */
-  --color-white  : #fff;
-  --color-gray   : #808080;
-  --color-black  : #000;
-  --color-red    : #f00;
-  --color-purple : #590059;
+  --color-off-white : #efefef;
+  --color-off-black : #121212;
+  --color-purple    : #360936;
+  --color-purple-2  : #864886;
 
   /* Unnamed colors, use these */
-  --color-background : var(--off-white);
-  --color-negative   : var(--off-black);
-  --color-text       : var(--off-black);
+  --color-background : var(--color-off-white);
+  --color-negative   : var(--color-off-black);
+  --color-text       : var(--color-off-black);
+  --color-link       : var(--color-text);
 
-  --color-accent     : var(--color-purple);
-  --color-link       : #270d27;
-  --color-light      : var(--off-white);
+  --primary: var(--color-purple-2);
+  --secondary: #808080;
 }
+
+/*
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-background : var(--color-off-black);
+    --color-negative   : var(--color-off-white);
+    --color-text       : var(--color-off-white);
+  }
+}
+*/
 
 /* latin-ext */
 @font-face {

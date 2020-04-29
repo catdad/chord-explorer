@@ -1,7 +1,5 @@
 import React from 'react';
 
-import './UkuleleChord.css';
-
 import Nut from './Nut.jsx';
 import Strings from './Strings.jsx';
 import Frets from './Frets.jsx';
@@ -12,10 +10,12 @@ function capitalize(str) {
   return str.charAt(0).toUpperCase() + str.slice(1);
 }
 
-export default function UkuleleChord({ name = 'open' } = {}) {
-  const fingering = getChord({ name });
+const instrument = 'guitar';
+
+export default function GuitarChord({ name = 'open' } = {}) {
+  const fingering = getChord({ name, instrument });
   let fingers = fingering ? fingering.split('').map(Number) : [];
-  const min = Math.min(...fingers);
+  const min = Math.min(...fingers.filter((i) => i > 0));
   const max = Math.max(...fingers);
   let base = 0;
 
@@ -32,12 +32,12 @@ export default function UkuleleChord({ name = 'open' } = {}) {
   }
 
   return (
-    <div className="ukulele-chord">
+    <div className="chord">
       <h1>{ fingering ? capitalize(name) : name }</h1>
       <svg viewBox="0 0 100 100">
-        <Frets />
-        <Strings />
-        <Nut base={ base } />
+        <Frets instrument={ instrument } />
+        <Strings instrument={ instrument } />
+        <Nut base={ base } instrument={ instrument } />
         <Fingers fingers={ fingers } />
       </svg>
     </div>
