@@ -3,6 +3,7 @@ import { createHashHistory } from 'history';
 
 import { inputToData, urlToData, urlParts } from '../../utils.js';
 
+import { withTheme } from '../Theme/Theme';
 import Chord from '../Chord/Chord';
 import ChordInput from '../ChordInput/ChordInput';
 import EmptyChordlist from '../EmptyChordlist/EmptyChordlist';
@@ -85,4 +86,4 @@ function App() {
   );
 }
 
-export default App;
+export default withTheme(App);
