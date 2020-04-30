@@ -2,6 +2,7 @@
   /* Named colors, don't use these */
   --color-off-white : #efefef;
   --color-off-black : #121212;
+  --color-gray      : #808080;
   --color-purple    : #360936;
   --color-purple-2  : #864886;
 
@@ -12,7 +13,7 @@
   --color-link       : var(--color-text);
 
   --primary: var(--color-purple-2);
-  --secondary: #808080;
+  --secondary: var(--color-gray);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -20,6 +21,8 @@
     --color-background : var(--color-off-black);
     --color-negative   : var(--color-off-white);
     --color-text       : var(--color-off-white);
+
+    --primary: #bf86bf;
   }
 }
 
