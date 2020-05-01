@@ -38,6 +38,9 @@ export default function Theme({ children = []} = {}) {
         default: getVar(style, '--color-background'),
         paper: getVar(style, '--color-background')
       }
+    },
+    typography: {
+      fontFamily: getVar(style, '--font-family')
     }
   });
 
