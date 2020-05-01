@@ -14,11 +14,14 @@
 }
 
 .app-body-wrap {
+  --gap: 10px;
   flex-grow: 1;
 
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
-  grid-gap: 10px;
+  grid-gap: var(--gap);
+  column-gap: var(--gap);
+  row-gap: var(--gap);
 }
 
 .app-body-wrap.empty {
