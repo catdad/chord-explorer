@@ -13,6 +13,7 @@
 
   --primary: var(--color-purple-2);
   --secondary: var(--color-gray);
+  --neutral: var(--color-gray);
 
   --font-family: 'Noto Sans', sans-serif;
 
