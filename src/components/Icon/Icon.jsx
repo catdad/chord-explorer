@@ -1,4 +1,4 @@
-import React from 'react';
+import { h } from 'preact';
 import * as icons from '../../constants/icons';
 import './Icon.css';
 

@@ -1,4 +1,5 @@
-import React, { useCallback, useEffect, useState } from 'react';
+import { h } from 'preact';
+import { useCallback, useEffect, useState } from 'preact/hooks';
 import { createHashHistory } from 'history';
 
 import { inputToData, urlToData, urlParts } from '../../utils.js';

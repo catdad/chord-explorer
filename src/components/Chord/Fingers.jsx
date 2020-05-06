@@ -1,4 +1,4 @@
-import React from 'react';
+import { h } from 'preact';
 
 const FRETSIZE = 99 / 4;
 const RADIUS = 5;
