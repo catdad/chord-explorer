@@ -1,3 +1,62 @@
 .chord-input.chord-input {
   padding: 20px 0 10px;
+
+  --font-size: 0.9rem;
+}
+
+.floating-input {
+  position: relative;
+  width: 100%;
+  box-shadow: 0 0 0 1px var(--neutral);
+  border-radius: var(--radius);
+}
+
+.floating-input:focus-within {
+  box-shadow: 0 0 0 2px var(--primary);
+}
+
+.floating-input label {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 8px;
+  height: 1rem;
+  margin: auto 0;
+  padding: 0 5px;
+  font-size: var(--font-size);
+  line-height: var(--font-size);
+  color: var(--color-text);
+
+  opacity: 0.6;
+  transition: transform 300ms;
+  pointer-events: none;
+}
+
+.floating-input input,
+.floating-input input:focus {
+  position: relative;
+  width: 100%;
+  padding: 12px;
+  font-size: var(--font-size);
+  background: none;
+  border: none;
+  outline: none;
+  line-height: 1.5;
+  color: var(--color-text);
+}
+
+.floating-input input:not(:placeholder-shown) + label {
+  background: var(--color-background);
+  bottom: auto;
+  margin: 0;
+  opacity: 1;
+  color: var(--neutral);
+  font-size: calc(var(--font-size) - 0.2rem);
+
+  transform: translate(0, -50%);
+}
+
+.floating-input:focus-within input:not(:placeholder-shown) + label {
+  font-weight: bold;
+  color: var(--primary);
 }
