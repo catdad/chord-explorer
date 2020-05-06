@@ -1,3 +1,5 @@
+/* eslint-disable quote-props */
+
 export default {
   // A
   'a': 'x02220',

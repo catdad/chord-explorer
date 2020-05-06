@@ -6,15 +6,15 @@
   "description": "",
   "scripts": {
     "build": "parcel build src/index.html --public-url \"./\" --no-cache --experimental-scope-hoisting",
-    "start": "parcel src/index.html"
+    "start": "parcel src/index.html",
+    "lint": "eslint src/**/*.jsx src/**/*.js"
   },
   "devDependencies": {
     "@babel/core": "^7.9.0",
     "babel-preset-react-app": "^9.1.2",
     "eslint": "^5.16.0",
-    "eslint-config-stezu": "^1.0.4",
+    "eslint-config-preact": "^1.1.1",
     "eslint-loader": "^1.6.1",
-    "eslint-plugin-react": "^6.9.0",
     "parcel-bundler": "^1.12.4",
     "parcel-plugin-bundle-visualiser": "^1.2.0",
     "parcel-plugin-html-externals": "^0.2.0"

@@ -1,3 +1,5 @@
+/* eslint-disable quote-props */
+
 import UKULELE from './chords-ukulele.js';
 import GUITAR from './chords-guitar.js';
 
