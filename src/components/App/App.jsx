@@ -25,11 +25,11 @@ function App() {
 
   useEffect(() => {
     const unlisten = history.listen((location) => {
-      const { chords: urlChords, instrument: urlInstrument } = urlParts(`#${location.pathname}`);
-      const data = urlToData(urlChords);
+      const { chords, instrument } = urlParts(`#${location.pathname}`);
+      const data = urlToData(chords);
 
       setChordState(data);
-      setInstrument(urlInstrument);
+      setInstrument(instrument);
     });
 
     return () => unlisten();
