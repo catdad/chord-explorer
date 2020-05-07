@@ -1,13 +1,18 @@
 import { h } from 'preact';
 import Icon from '../Icon/Icon';
 
-export default function EmptyChordlist() {
+const viewBox = {
+  guitar: '0 0 90 90',
+  ukulele: '0 0 100 100'
+};
+
+export default function EmptyChordlist({ instrument = 'ukulele' } = {}) {
   return (
     <Icon
-      name="ukulele"
+      name={ instrument }
       size={ 300 }
       style={ { fill: 'rgba(89,0,89,.4)' } }
-      viewBox="0 0 100 100"
+      viewBox={ viewBox[instrument] }
     />
   );
 }

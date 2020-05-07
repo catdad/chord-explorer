@@ -76,7 +76,7 @@ function App() {
       <div className={ `app-body-wrap ${chords.length === 0 ? 'empty' : ''}` }>{
         chordElems.length ?
           chordElems :
-          <EmptyChordlist />
+          <EmptyChordlist instrument={ instrument } />
       }</div>
       <footer>
         <span>{ 'made with 💜 and 🍹 by ' }</span>
