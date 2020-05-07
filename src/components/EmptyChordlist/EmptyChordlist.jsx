@@ -11,7 +11,7 @@ export default function EmptyChordlist({ instrument = 'ukulele' } = {}) {
     <Icon
       name={ instrument }
       size={ 300 }
-      style={ { fill: 'rgba(89,0,89,.4)' } }
+      style={ { fill: 'var(--primary)', opacity: 'var(--icon-opacity)' } }
       viewBox={ viewBox[instrument] }
     />
   );
