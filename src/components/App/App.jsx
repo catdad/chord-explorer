@@ -1,4 +1,5 @@
-import React, { useCallback, useEffect, useState } from 'react';
+import { h } from 'preact';
+import { useCallback, useEffect, useState } from 'preact/hooks';
 import { createHashHistory } from 'history';
 
 import { inputToData, urlToData, urlParts } from '../../utils.js';
@@ -24,11 +25,11 @@ function App() {
 
   useEffect(() => {
     const unlisten = history.listen((location) => {
-      const { chords: urlChords, instrument: urlInstrument } = urlParts(`#${location.pathname}`);
-      const data = urlToData(urlChords);
+      const { chords, instrument } = urlParts(`#${location.pathname}`);
+      const data = urlToData(chords);
 
       setChordState(data);
-      setInstrument(urlInstrument);
+      setInstrument(instrument);
     });
 
     return () => unlisten();

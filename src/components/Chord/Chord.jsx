@@ -1,4 +1,4 @@
-import React from 'react';
+import { h } from 'preact';
 
 import GuitarChord from './GuitarChord.jsx';
 import UkuleleChord from './UkuleleChord.jsx';

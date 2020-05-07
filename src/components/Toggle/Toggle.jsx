@@ -1,4 +1,5 @@
-import React, { useCallback } from 'react';
+import { h } from 'preact';
+import { useCallback } from 'preact/hooks';
 
 import './Toggle.css';
 

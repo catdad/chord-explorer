@@ -1,4 +1,4 @@
-import React from 'react';
+import { h } from 'preact';
 
 const wrap = (elems) => (<g className="nut">{ elems }</g>);
 
