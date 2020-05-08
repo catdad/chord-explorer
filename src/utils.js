@@ -36,7 +36,7 @@ export const urlToData = (urlString) => {
 };
 
 export const urlParts = (hash = document.location.hash) => {
-  const match = hash.match(/^#\/([a-z]+)\/([^/]+)$/) || [];
+  const match = hash.match(/^#\/([a-z]+)(?:$|\/$|\/([^/]+)$)/) || [];
 
   return {
     instrument: match[1] || 'ukulele',
