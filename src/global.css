@@ -18,6 +18,7 @@
   --font-family: 'Noto Sans', sans-serif;
 
   --radius: 4px;
+  --icon-opacity: 0.7;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -26,6 +27,7 @@
     --color-text       : var(--color-off-white);
 
     --primary: #be94be;
+    --icon-opacity: 0.9;
   }
 }
 
