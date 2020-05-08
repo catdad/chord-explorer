@@ -20,7 +20,6 @@
     "parcel-plugin-html-externals": "^0.2.0"
   },
   "dependencies": {
-    "@material-ui/core": "^4.9.12",
     "history": "^4.10.1",
     "preact": "^10.4.1"
   },
