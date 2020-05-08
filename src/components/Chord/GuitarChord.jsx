@@ -16,13 +16,17 @@ export default function GuitarChord({ name = 'open' } = {}) {
   const fingering = getChord({ name, instrument });
   let fingers = fingering ? fingering.split('').map(Number) : [];
   const min = Math.min(...fingers.filter((i) => i > 0));
-  const max = Math.max(...fingers);
+  const max = Math.max(...fingers.filter((i) => !isNaN(i)));
   let base = 0;
 
   if (max > 4) {
     // this chord is further up the next, so adjust
     base = min;
     fingers = fingers.map((i) => {
+      if (isNaN(i)) {
+        return i;
+      }
+
       if (i) {
         return i - min + 1;
       }
