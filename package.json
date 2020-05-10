@@ -10,8 +10,7 @@
     "lint": "eslint src/**/*.jsx src/**/*.js"
   },
   "devDependencies": {
-    "@babel/core": "^7.9.0",
-    "babel-preset-react-app": "^9.1.2",
+    "@babel/core": "^7.9.6",
     "eslint": "^5.16.0",
     "eslint-config-preact": "^1.1.1",
     "eslint-loader": "^1.6.1",
@@ -22,11 +21,6 @@
   "dependencies": {
     "history": "^4.10.1",
     "preact": "^10.4.1"
-  },
-  "babel": {
-    "presets": [
-      "react-app"
-    ]
   },
   "externals": {
     "/analytics.js": false
