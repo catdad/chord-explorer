@@ -1,5 +1,5 @@
 <p align="center">
-  <a href="https://catdad-experiments.github.io/reminder/">
+  <a href="http://catdad.github.io/chord-explorer/">
     <img src="src/icons/favicon.svg" width="200px" alt="logo" />
   </a>
 </p>
