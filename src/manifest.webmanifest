@@ -4,8 +4,13 @@
   "description": "Look up ukulele and guitar chords",
   "start_url": "./",
   "icons": [{
+    "src": "icons/favicon.png",
+    "sizes": "512x512",
+    "type": "image/png"
+  }, {
     "src": "icons/favicon.svg",
-    "sizes": "512x512"
+    "sizes": "512x512",
+    "type": "image/svg+xml"
   }],
   "background_color": "#202124",
   "display": "standalone",
