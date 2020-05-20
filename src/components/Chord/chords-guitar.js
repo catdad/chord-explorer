@@ -11,7 +11,7 @@ export default {
 
   // A# / Bb
   'a#': 'x1333x',
-  'a#m': '113321',
+  'a#m': 'x13321',
   'a#7': 'xx3334',
 
   // B
@@ -28,6 +28,8 @@ export default {
   'c9': 'x7878x',
 
   // C# / Db
+  'c#': 'x46664',
+  'c#m': 'x46654',
 
   // D
   'd': 'xx0232',
@@ -61,6 +63,8 @@ export default {
   'gm7': '353363',
 
   // G# / Ab
+  'g#': '466544',
+  'g#m': '466444',
 
   // special names
   'open': '000000'
