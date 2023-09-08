@@ -8,11 +8,16 @@ const viewBox = {
 
 export default function EmptyChordlist({ instrument = 'ukulele' } = {}) {
   return (
-    <Icon
-      name={ instrument }
-      size={ 300 }
-      style={ { fill: 'var(--primary)', opacity: 'var(--icon-opacity)' } }
-      viewBox={ viewBox[instrument] }
-    />
+    <div>
+      <div style="text-align: center; padding: 1em">
+        Type some short names to see their finger diagrams
+      </div>
+      <Icon
+        name={ instrument }
+        size={ 300 }
+        style={ { fill: 'var(--primary)', opacity: 'var(--icon-opacity)' } }
+        viewBox={ viewBox[instrument] }
+      />
+    </div>
   );
 }
