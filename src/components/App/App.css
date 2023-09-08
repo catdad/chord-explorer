@@ -19,6 +19,7 @@
 
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  grid-template-rows: repeat(auto-fill, calc(120px + 1em + var(--gap)));
   grid-gap: var(--gap);
   column-gap: var(--gap);
   row-gap: var(--gap);
